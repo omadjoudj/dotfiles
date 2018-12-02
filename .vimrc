@@ -50,7 +50,7 @@ set hidden "dont ask about unsaved buffers
 set background=dark
 set wildmenu
 set path+=**
-colorscheme solarized
+colorscheme desert
 
 if has("gui_running")
     set cursorline
