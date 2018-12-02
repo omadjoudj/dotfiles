@@ -43,10 +43,10 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id rofi -show run
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+l focus left
+bindsym $mod+semicolon focus down
+bindsym $mod+p focus up
+bindsym $mod+apostrophe focus right
 
 # MSWin memory muscle
 bindsym Mod1+Tab exec --no-startup-id rofi -kb-accept-entry '!Alt-Tab' -kb-row-down Alt-Tab -show window
@@ -63,10 +63,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+l move left
+bindsym $mod+Shift+semicolon move down
+bindsym $mod+Shift+p move up
+bindsym $mod+Shift+apostrophe move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -144,10 +144,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym l resize shrink width 10 px or 10 ppt
+        bindsym semicolon resize grow height 10 px or 10 ppt
+        bindsym p resize shrink height 10 px or 10 ppt
+        bindsym apostrophe resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Right resize shrink width 10 px or 10 ppt
