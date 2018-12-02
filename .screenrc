@@ -1,0 +1,24 @@
+startup_message off
+#caption always '%{.gk}[%S] %-Lw%{.dd} %n%f %t %{-}%+Lw'
+caption always '%{.dw}[%S] %{.dw}%-Lw%{.gw} %n%f %t %{-}%+Lw'
+#hardstatus string '%{.gk}%-Lw%{.dd} %n%f %t %{-}%+Lw'
+
+vbell off
+bell_msg '^G'
+#altscreen on
+term 'screen-256color'
+defscrollback 10000
+shelltitle '$ |bash'
+#attrcolor b ".I"
+rendition so = gk
+#term xterm
+termcapinfo xterm* ti@:te@
+
+# navigating regions with Ctrl-arrows
+bindkey "^[[1;5D" focus left
+bindkey "^[[1;5C" focus right
+bindkey "^[[1;5A" focus up
+bindkey "^[[1;5B" focus down
+# Arrow keys to switch terminals (only works with X)
+#bindkey "^[[1;3D" prev
+#bindkey "^[[1;3C" next
