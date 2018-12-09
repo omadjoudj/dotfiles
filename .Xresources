@@ -1,42 +1,45 @@
-xterm*faceName: Hack
-xterm*faceSize: 12
-xterm*loginshell: true
-xterm*savelines: 16384
-xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
-xterm*ScrollBar: false
-xterm*scrollTtyOutput: false
-xterm*metaSendsEscape:  true
+URxvt*saveLines:            10000
+URxvt*urgentOnBell:       true
+URxvt*cutchars:           BACKSLASH '"'&()*,;<=>?@[]^{|}
+URxvt*scrollBar:          true
+URxvt*thickness:          5
+URxvt*scrollBar_right:    true
+URxvt*scrollstyle:        plain
+URxvt.font: xft:Hack:size=12
+URxvt*title:              Terminal
+
+
 
 
 ! Tango color scheme
 ! ------------------
-!xterm*foreground:       #eeeeec
-xterm*foreground:       #aaaaa0
-xterm*background:       #2e3436
-xterm*cursorColor:      #8ae234
-xterm*colorUL:          #8ae234
-xterm*underlineColor:   #92659a
+!*foreground:       #eeeeec
+*foreground:       #aaaaa0
+*background:       #2e3436
+*cursorColor:      #8ae234
+*colorUL:          #8ae234
+*underlineColor:   #92659a
 ! - Aluminium -
-xterm*color0:           #2e3436
-xterm*color8:           #888A85
+*color0:           #2e3436
+*color8:           #888A85
 ! - Scariet Red -
-xterm*color1:           #cc0000
-xterm*color9:           #ef2929
+*color1:           #cc0000
+*color9:           #ef2929
 ! - Chameleon -
-xterm*color2:           #4e9a06
-xterm*color10:          #8ae234
+*color2:           #4e9a06
+*color10:          #8ae234
 ! - Butter -
-xterm*color3:           #edd400
-xterm*color11:          #fce94f
+*color3:           #edd400
+*color11:          #fce94f
 ! - Sky Blue -
-xterm*color4:           #3465a4
-xterm*color12:          #729fcf
+*color4:           #3465a4
+*color12:          #729fcf
 ! - Plum -
-xterm*color5:           #92659a
-xterm*color13:          #c19fbe
+*color5:           #92659a
+*color13:          #c19fbe
 ! - Cyan -
-xterm*color6:           #07c7ca
-xterm*color14:          #63e9e9
+*color6:           #07c7ca
+*color14:          #63e9e9
 ! - Aluminium 2 -
-xterm*color7:           #d3d7cf
-xterm*color15:          #eeeeec
+*color7:           #d3d7cf
+*color15:          #eeeeec
