@@ -43,7 +43,7 @@ set number
 set relativenumber
 set incsearch
 set laststatus=2
-set t_Co=256
+"set t_Co=256
 "set cindent
 set hidden "dont ask about unsaved buffers
 "set mouse=a
