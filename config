@@ -16,7 +16,7 @@ set $mod Mod4
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:Hack 10
+font pango:Monospace 10
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -43,10 +43,10 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id rofi -show run
 
 # change focus
-bindsym $mod+l focus left
-bindsym $mod+semicolon focus down
-bindsym $mod+p focus up
-bindsym $mod+apostrophe focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # MSWin memory muscle
 bindsym Mod1+Tab exec --no-startup-id rofi -kb-accept-entry '!Alt-Tab' -kb-row-down Alt-Tab -show window
@@ -63,10 +63,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+l move left
-bindsym $mod+Shift+semicolon move down
-bindsym $mod+Shift+p move up
-bindsym $mod+Shift+apostrophe move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -75,7 +75,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+g split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -144,10 +144,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym apostrophe resize shrink width 10 px or 10 ppt
-        bindsym p resize grow height 10 px or 10 ppt
-        bindsym semicolon resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
+        bindsym l resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym j resize shrink height 10 px or 10 ppt
+        bindsym h resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Right resize shrink width 10 px or 10 ppt
@@ -189,7 +189,8 @@ exec --no-startup-id xset r rate 200 25
 exec --no-startup-id xinput set-prop 'SynPS/2 Synaptics TouchPad' 295 1
 exec --no-startup-id xinput set-prop 17 305 -0.8
 #exec --no-startup-id sleep 2 && xrandr --output VGA1 --above LVDS1
-exec --no-startup-id sh -c 'source ~/.fehbg'
+#exec --no-startup-id sh -c 'source ~/.fehbg'
+exec --no-startup-id xsetroot -solid '#536878'
 exec --no-startup-id /usr/bin/nm-applet &
 exec --no-startup-id /usr/libexec/polkit-gnome-authentication-agent-1 &
 exec --no-startup-id xrdb -load ~/.Xresources
