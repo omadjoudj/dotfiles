@@ -49,8 +49,8 @@ bindsym $mod+k focus up
 bindsym $mod+l focus right
 
 # MSWin memory muscle
-bindsym Mod1+Tab exec --no-startup-id rofi -kb-accept-entry '!Alt-Tab' -kb-row-down Alt-Tab -show window
-bindsym $mod+Tab exec --no-startup-id rofi -kb-accept-entry '!Alt-Tab' -kb-row-down Alt-Tab -show window
+bindsym Mod1+Tab exec --no-startup-id rofi -show window
+bindsym $mod+Tab exec --no-startup-id rofi -show window
 
 # Tab for next workspace
 #bindsym $mod+Tab workspace next
@@ -100,8 +100,8 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-set $w1 1:main
-set $w2 2:web
+set $w1 1:🐚 main
+set $w2 2:🌍 web
 set $w3 3
 #set $w3 3:remote
 
