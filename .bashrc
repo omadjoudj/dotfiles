@@ -18,7 +18,9 @@ export EDITOR=vim
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-alias x='startx'
+#alias x='startx'
+#alias screen='tmux'
+
 
 case "$TERM" in
     screen*) PROMPT_COMMAND='echo -ne "\033k\033\0134"'

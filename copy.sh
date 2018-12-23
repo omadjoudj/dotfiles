@@ -5,4 +5,5 @@ cp ~/.i3status.conf .
 cp ~/.Xresources .
 cp ~/.vimrc .
 cp ~/.screenrc .
+cp ~/.tmux.conf .
 cp ~/.bashrc .

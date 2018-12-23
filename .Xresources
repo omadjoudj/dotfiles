@@ -16,8 +16,9 @@ URxvt.iso14755_52: false
 ! Tango color scheme
 ! ------------------
 !*foreground:       #eeeeec
-*foreground:       #aaaaa0
-*background:       #2e3436
+!*background:       #2e3436
+*foreground:       #839496
+*background:       #002b36
 *cursorColor:      #8ae234
 *colorUL:          #8ae234
 *underlineColor:   #92659a

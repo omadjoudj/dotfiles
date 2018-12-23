@@ -103,6 +103,7 @@ let g:buftabline_indicators=1
 " Make helpers
 autocmd FileType spec set makeprg=rpmbuild\ -ba\ %
 autocmd FileType yaml set makeprg=ansible-lint\ %
+autocmd BufWritePost,FileWritePost *.go execute 'Lint' | cwindow
 "autocmd FileType python set makeprg=python\ %
 "autocmd FileType python set makeprg=pyflakes\ %
 "autocmd FileType python set errorformat=%f:%l:\ %m
