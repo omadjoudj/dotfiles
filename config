@@ -49,8 +49,8 @@ bindsym $mod+k focus up
 bindsym $mod+l focus right
 
 # MSWin memory muscle
-bindsym Mod1+Tab exec --no-startup-id rofi -show window
-bindsym $mod+Tab exec --no-startup-id rofi -show window
+#bindsym Mod1+Tab exec --no-startup-id rofi -show window
+#bindsym $mod+Tab exec --no-startup-id rofi -show window
 
 # Tab for next workspace
 #bindsym $mod+Tab workspace next

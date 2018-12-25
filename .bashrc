@@ -18,7 +18,7 @@ export EDITOR=vim
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-#alias x='startx'
+alias x='startx'
 #alias screen='tmux'
 
 

@@ -6,7 +6,6 @@ URxvt*thickness:          5
 URxvt*scrollBar_right:    true
 URxvt*scrollstyle:        plain
 URxvt.font: xft:Monospace:size=12
-URxvt*title:              Terminal
 URxvt.iso14755: false
 URxvt.iso14755_52: false
 
