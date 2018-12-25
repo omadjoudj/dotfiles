@@ -1,14 +1,11 @@
-URxvt*saveLines:            10000
-URxvt*urgentOnBell:       true
-URxvt*cutchars:           BACKSLASH '"'&()*,;<=>?@[]^{|}
-URxvt*scrollBar:          true
-URxvt*thickness:          5
-URxvt*scrollBar_right:    true
-URxvt*scrollstyle:        plain
-URxvt.font: xft:Monospace:size=12
-URxvt.iso14755: false
-URxvt.iso14755_52: false
-
+xterm*faceName: Monospace
+xterm*faceSize: 12
+xterm*loginshell: true
+xterm*savelines: 16384
+xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+xterm*ScrollBar: false
+xterm*scrollTtyOutput: false
+xterm*metaSendsEscape:  true
 
 
 

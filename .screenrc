@@ -1,6 +1,6 @@
 startup_message off
-#caption always '%{.gk}[%S] %-Lw%{.dd} %n%f %t %{-}%+Lw'
-caption always '%{.dw}[%S] %{.dw}%-Lw%{.gw} %n%f %t %{-}%+Lw'
+#caption always '%{.Kk}[%S] %-Lw%{.dd} %n%f %t %{-}%+Lw'
+caption always '%{.kW}[%S] %{.kw}%-Lw%{.bw} %n%f %t %{-}%+Lw'
 #hardstatus string '%{.gk}%-Lw%{.dd} %n%f %t %{-}%+Lw'
 
 vbell off
@@ -10,9 +10,9 @@ term 'screen-256color'
 defscrollback 10000
 shelltitle '$ |bash'
 #attrcolor b ".I"
-rendition so = gk
+#rendition so = gk
 #term xterm
-termcapinfo xterm* ti@:te@
+#termcapinfo xterm* ti@:te@
 
 # navigating regions with Ctrl-arrows
 bindkey "^[[1;5D" focus left
