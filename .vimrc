@@ -1,24 +1,20 @@
-" Pre-Reqs
-" yum search vim
-" yum -y install vim-enhanced vim-X11 vim-jedi vim-omnicppcomplete vim-nerdtree vim-syntastic-python vim-syntastic-c
+call plug#begin('~/.vim/plugged')
 
-""""""" SETUP
-" mkdir -p ~/.vim/pack/plugins/start/ && cd ~/.vim/pack/plugins/start/ && grep -E '^"\+' ~/.vimrc | sed 's/^"+//'  | xargs -P5 -I{} bash -c "{}"
-""""""" EOS
-
-"+git clone https://github.com/athmane/pyflakes-vim
-"+git clone https://github.com/itchyny/lightline.vim
-"+git clone https://github.com/ap/vim-buftabline
+Plug 'athmane/pyflakes-vim'
+Plug 'itchyny/lightline.vim'
+Plug 'ap/vim-buftabline'
+Plug 'scrooloose/nerdtree'
 
 " Optional or removed due to perf issues
-"-git clone https://github.com/vim-airline/vim-airline
-"-git clone https://github.com/scrooloose/nerdtree
-"-git clone https://github.com/ctrlpvim/ctrlp.vim.git
-"-git clone https://github.com/SirVer/ultisnips.git
-"-git clone https://github.com/honza/vim-snippets.git
-"-git clone https://github.com/vim-airline/vim-airline-themes
-"-git clone https://github.com/jpalardy/vim-slime.git
+"Plug 'vim-airline/vim-airline'
+"Plug 'scrooloose/nerdtree'
+"Plug 'ctrlpvim/ctrlp.vim.git'
+"Plug 'SirVer/ultisnips.git'
+"Plug 'honza/vim-snippets.git'
+"Plug 'vim-airline/vim-airline-themes'
+"Plug 'jpalardy/vim-slime.git'
 
+call plug#end()
 
 " Basic settings
 set tabstop=8
@@ -50,7 +46,7 @@ set hidden "dont ask about unsaved buffers
 set background=dark
 set wildmenu
 set path+=**
-colorscheme desert
+"colorscheme desert
 
 if has("gui_running")
     set cursorline

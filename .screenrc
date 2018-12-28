@@ -1,7 +1,8 @@
 startup_message off
 #caption always '%{.Kk}[%S] %-Lw%{.dd} %n%f %t %{-}%+Lw'
-caption always '%{.kW}[%S] %{.kw}%-Lw%{.bw} %n%f %t %{-}%+Lw'
+#caption always '%{.kW}[%S] %{.kw}%-Lw%{.bw} %n%f %t %{-}%+Lw'
 #hardstatus string '%{.gk}%-Lw%{.dd} %n%f %t %{-}%+Lw'
+caption always '%{.kW}[%S] %{.rw}%-Lw%{.bw} %n%f %t %{-}%+Lw'
 
 vbell off
 bell_msg '^G'
