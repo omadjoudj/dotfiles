@@ -11,10 +11,8 @@ xterm*metaSendsEscape:  true
 
 ! Tango color scheme
 ! ------------------
-!*foreground:       #eeeeec
-!*background:       #2e3436
-*foreground:       #839496
-*background:       #002b36
+*foreground:       #eeeeec
+*background:       #2e3436
 *cursorColor:      #8ae234
 *colorUL:          #8ae234
 *underlineColor:   #92659a

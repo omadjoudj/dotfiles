@@ -36,7 +36,7 @@ set autoindent
 set shiftround
 set backspace=indent,eol,start
 set number
-set relativenumber
+"set relativenumber
 set incsearch
 set laststatus=2
 "set t_Co=256
@@ -120,3 +120,8 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
+
+imap <C-k> :bn<CR>
+imap <C-j> :bp<CR>
+nmap <C-k> :bn<CR>
+nmap <C-j> :bp<CR>
