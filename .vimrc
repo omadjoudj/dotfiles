@@ -1,12 +1,14 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'athmane/pyflakes-vim'
-Plug 'itchyny/lightline.vim'
-Plug 'ap/vim-buftabline'
 Plug 'scrooloose/nerdtree'
+Plug 'mhinz/vim-startify'
+Plug 'vim-airline/vim-airline'
+Plug 'tomasiser/vim-code-dark'
+Plug 'mhinz/vim-startify'
+
 
 " Optional or removed due to perf issues
-"Plug 'vim-airline/vim-airline'
 "Plug 'scrooloose/nerdtree'
 "Plug 'ctrlpvim/ctrlp.vim.git'
 "Plug 'SirVer/ultisnips.git'
@@ -46,13 +48,14 @@ set hidden "dont ask about unsaved buffers
 set background=dark
 set wildmenu
 set path+=**
-"colorscheme desert
+colorscheme codedark
 
 if has("gui_running")
     set cursorline
     set guioptions-=T
     "set guioptions-=m
-    set guifont=Monospace\ 12
+    set guifont=Ubuntu\ Mono\ 13
+    colorscheme desert
 endif
 
 if has("win32")
@@ -91,10 +94,11 @@ map <leader>e :NERDTreeToggle<CR>
 " vim password manager
 set cryptmethod=blowfish
 
-" Buftabline and Lightline config
-let g:buftabline_numbers=1
-let g:buftabline_indicators=1
-"let g:lightline = {'colorscheme': 'solarized',}
+" AirLine config
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme = 'codedark'
+
+
 
 " Make helpers
 autocmd FileType spec set makeprg=rpmbuild\ -ba\ %
@@ -120,8 +124,7 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
-
-imap <C-k> :bn<CR>
+nmap <C-j> :bp<CR>
 imap <C-j> :bp<CR>
 nmap <C-k> :bn<CR>
-nmap <C-j> :bp<CR>
+imap <C-k> :bn<CR>
