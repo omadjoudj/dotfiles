@@ -5,8 +5,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'mhinz/vim-startify'
 Plug 'vim-airline/vim-airline'
 Plug 'tomasiser/vim-code-dark'
-Plug 'mhinz/vim-startify'
-
 
 " Optional or removed due to perf issues
 "Plug 'ctrlpvim/ctrlp.vim.git'
