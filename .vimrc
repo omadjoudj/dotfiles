@@ -54,7 +54,6 @@ if has("gui_running")
     set guioptions-=T
     "set guioptions-=m
     set guifont=Ubuntu\ Mono\ 13
-    colorscheme desert
 endif
 
 if has("win32")
