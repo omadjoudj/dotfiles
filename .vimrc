@@ -70,14 +70,6 @@ endif
 " Folding
 "set foldmethod=indent
 
-
-" fix omnicompletition / line num colors
-highlight Pmenu ctermfg=black ctermbg=lightgray
-highlight PmenuSel ctermfg=white ctermbg=darkblue gui=bold
-highlight Pmenu guifg=black guibg=lightgray
-highlight PmenuSel guifg=white guibg=darkblue gui=bold
-highlight LineNr guifg=#555555
-highlight LineNr ctermfg=darkgray
 autocmd CompleteDone * pclose
 filetype plugin indent on
 
