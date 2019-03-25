@@ -2,7 +2,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'athmane/pyflakes-vim'
 Plug 'scrooloose/nerdtree'
-Plug 'mhinz/vim-startify'
 Plug 'vim-airline/vim-airline'
 Plug 'tomasiser/vim-code-dark'
 
