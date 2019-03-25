@@ -9,7 +9,6 @@ Plug 'mhinz/vim-startify'
 
 
 " Optional or removed due to perf issues
-"Plug 'scrooloose/nerdtree'
 "Plug 'ctrlpvim/ctrlp.vim.git'
 "Plug 'SirVer/ultisnips.git'
 "Plug 'honza/vim-snippets.git'
