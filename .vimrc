@@ -78,6 +78,15 @@ map <leader>r :make<CR>
 map <leader>s :set spell!<CR>
 map <leader>e :NERDTreeToggle<CR>
 
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+nmap <C-j> :bp<CR>
+imap <C-j> :bp<CR>
+nmap <C-k> :bn<CR>
+imap <C-k> :bn<CR>
+
 " vim password manager
 set cryptmethod=blowfish
 
@@ -107,12 +116,3 @@ autocmd Syntax * syntax match sensibleWhitespaceError excludenl /\s\+\%#\@<!$\| 
 
 ab __fp Athmane Madjoudj <athmane@fedoraproject.org>
 ab __ms Othmane Madjoudj <omadjoudj@mirantis.com>
-
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
-nmap <C-j> :bp<CR>
-imap <C-j> :bp<CR>
-nmap <C-k> :bn<CR>
-imap <C-k> :bn<CR>
