@@ -105,7 +105,8 @@ autocmd Syntax * call matchadd('Debug', '\W\zs\(NOTE\|INFO\|IDEA\)')
 highlight link sensibleWhitespaceError Error
 autocmd Syntax * syntax match sensibleWhitespaceError excludenl /\s\+\%#\@<!$\| \+\ze\t/ display containedin=ALL
 
-ab ___ Athmane Madjoudj <athmane@fedoraproject.org>
+ab __fp Athmane Madjoudj <athmane@fedoraproject.org>
+ab __ms Othmane Madjoudj <omadjoudj@mirantis.com>
 
 noremap <Up> <NOP>
 noremap <Down> <NOP>
