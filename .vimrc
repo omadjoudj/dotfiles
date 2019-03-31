@@ -1,6 +1,5 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'athmane/pyflakes-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'tomasiser/vim-code-dark'
@@ -93,8 +92,7 @@ set cryptmethod=blowfish
 " AirLine config
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'codedark'
-
-
+let g:airline#extensions#ale#enabled = 1
 
 " Make helpers
 autocmd FileType spec set makeprg=rpmbuild\ -ba\ %
