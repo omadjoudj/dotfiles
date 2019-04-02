@@ -49,6 +49,7 @@ if has("gui_running")
     set cursorline
     set guioptions-=T
     "set guioptions-=m
+    "set go=c
     set guifont=Ubuntu\ Mono\ 13
 endif
 
