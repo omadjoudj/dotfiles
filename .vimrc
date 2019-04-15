@@ -50,6 +50,8 @@ if has("gui_running")
     set guioptions-=T
     "set guioptions-=m
     "set go=c
+    " Console + X11 Clipboard
+    set go=ca
     set guifont=Ubuntu\ Mono\ 13
 endif
 
@@ -72,8 +74,8 @@ filetype plugin indent on
 au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 
 " Keymaps
-map <leader>p "+gP
-map <leader>y "+y
+"map <leader>p "+gP
+"map <leader>y "+y
 map <leader>r :make<CR>
 map <leader>s :set spell!<CR>
 map <leader>e :NERDTreeToggle<CR>
