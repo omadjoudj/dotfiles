@@ -44,10 +44,10 @@ set background=dark
 set wildmenu
 set path+=**
 colorscheme codedark
+set cursorline
 
 if has("gui_running")
-    set cursorline
-    set guioptions-=T
+    "set guioptions-=T
     "set guioptions-=m
     "set go=c
     " Console + X11 Clipboard
