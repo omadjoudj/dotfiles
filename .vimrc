@@ -3,7 +3,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'tomasr/molokai'
+Plug 'nanotech/jellybeans.vim'
 
 " Optional or removed due to perf issues
 "Plug 'ctrlpvim/ctrlp.vim.git'
@@ -43,7 +43,7 @@ set hidden "dont ask about unsaved buffers
 set background=dark
 set wildmenu
 set path+=**
-colorscheme molokai
+colorscheme jellybeans
 set cursorline
 
 if has("gui_running")
@@ -92,7 +92,7 @@ set cryptmethod=blowfish
 
 " AirLine config
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme = 'molokai'
+let g:airline_theme = 'jellybeans'
 let g:airline#extensions#ale#enabled = 1
 
 " Make helpers
