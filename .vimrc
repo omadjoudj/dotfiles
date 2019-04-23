@@ -2,13 +2,11 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
-Plug 'tomasiser/vim-code-dark'
 
 " Optional or removed due to perf issues
 "Plug 'ctrlpvim/ctrlp.vim.git'
 "Plug 'SirVer/ultisnips.git'
 "Plug 'honza/vim-snippets.git'
-"Plug 'vim-airline/vim-airline-themes'
 "Plug 'jpalardy/vim-slime.git'
 
 call plug#end()
@@ -43,7 +41,7 @@ set hidden "dont ask about unsaved buffers
 set background=dark
 set wildmenu
 set path+=**
-colorscheme codedark
+colorscheme desert
 set cursorline
 
 if has("gui_running")
@@ -94,7 +92,6 @@ set cryptmethod=blowfish
 
 " AirLine config
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme = 'codedark'
 
 " Make helpers
 autocmd FileType spec set makeprg=rpmbuild\ -ba\ %
