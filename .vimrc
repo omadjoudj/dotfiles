@@ -1,16 +1,8 @@
-call plug#begin('~/.vim/plugged')
-
-Plug 'scrooloose/nerdtree'
-Plug 'vim-airline/vim-airline'
-Plug 'sickill/vim-monokai'
-
-" Optional or removed due to perf issues
-"Plug 'ctrlpvim/ctrlp.vim.git'
-"Plug 'SirVer/ultisnips.git'
-"Plug 'honza/vim-snippets.git'
-"Plug 'jpalardy/vim-slime.git'
-
-call plug#end()
+" Plugins (any line with the marker will be git-cloned into vim dir)
+"__ https://github.com/scrooloose/nerdtree
+"__ https://github.com/itchyny/lightline.vim
+"__ https://github.com/ap/vim-buftabline
+"__ https://github.com/sheerun/vim-wombat-scheme
 
 " Basic settings
 set tabstop=8
@@ -42,7 +34,7 @@ set hidden "dont ask about unsaved buffers
 set background=dark
 set wildmenu
 set path+=**
-colorscheme monokai
+colorscheme wombat
 set cursorline
 
 if has("gui_running")
@@ -90,10 +82,6 @@ imap <C-k> :bn<CR>
 
 " vim password manager
 set cryptmethod=blowfish
-
-" AirLine config
-let g:airline#extensions#tabline#enabled = 1
-"let g:airline_theme = 'solarized'
 
 " Make helpers
 autocmd FileType spec set makeprg=rpmbuild\ -ba\ %
