@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Initial setup
+
+mkdir -p $HOME/.vim/pack/plugins/start/
+
+cd $HOME/.vim/pack/plugins/start/ && \
+grep '^"__' ~/.vimrc | sed 's/^"__ //' | xargs -P 5 -I {} git clone {} || \
+
+
+# Update plugins
+ls  ~/.vim/pack/plugins/start/  |  xargs -P 5 -I {} git -C "$HOME/.vim/pack/plugins/start/{}" pull
