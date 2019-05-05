@@ -2,7 +2,6 @@
 "__ https://github.com/scrooloose/nerdtree
 "__ https://github.com/itchyny/lightline.vim
 "__ https://github.com/ap/vim-buftabline
-"__ https://github.com/sheerun/vim-wombat-scheme
 
 " Basic settings
 set tabstop=8
@@ -34,8 +33,14 @@ set hidden "dont ask about unsaved buffers
 set background=dark
 set wildmenu
 set path+=**
-colorscheme wombat
+colorscheme desert
 set cursorline
+
+" desert colorscheme fixes
+hi CursorLine cterm=none term=none
+hi Pmenu ctermbg=darkgrey ctermfg=white guibg=darkgrey guifg=white
+hi PmenuSel ctermbg=darkblue ctermfg=white guibg=darkblue guifg=white
+
 
 if has("gui_running")
     "set guioptions-=T
