@@ -185,16 +185,13 @@ bar {
 
 # Auto Exec
 exec --no-startup-id xset r rate 200 25
-#exec --no-startup-id synclient TapButton1=1
-#exec --no-startup-id xinput set-prop 17 305 -0.8
-#exec --no-startup-id xinput set-prop 11 282 1
-exec --no-startup-id xinput set-prop 12 289 1
+exec --no-startup-id xinput set-prop 13 306 1
 #exec --no-startup-id sleep 2 && xrandr --output VGA1 --above LVDS1
-exec --no-startup-id sh -c 'source ~/.fehbg'
-#exec --no-startup-id xsetroot -solid '#536878'
+#exec --no-startup-id sh -c 'source ~/.fehbg'
+exec --no-startup-id xsetroot -solid '#536878'
 exec --no-startup-id /usr/bin/nm-applet &
 exec --no-startup-id /usr/libexec/polkit-gnome-authentication-agent-1 &
-exec --no-startup-id xrdb -load ~/.Xresources
+#exec --no-startup-id xrdb -load ~/.Xresources
 #exec --no-startup-id echo 'power on' | bluetoothctl
 exec --no-startup-id sh -c 'echo connect | bluetoothctl'
 
@@ -211,6 +208,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 # Apps default workspace
 assign [class="Google-chrome"] $w2
 assign [class="Chromium"] $w2
+assign [class="Firefox"] $w2
 #assign [class="vlc"] $media
 
 
