@@ -2,6 +2,7 @@
 "__ https://github.com/scrooloose/nerdtree
 "__ https://github.com/itchyny/lightline.vim
 "__ https://github.com/ap/vim-buftabline
+"
 
 " Basic settings
 set tabstop=8
@@ -48,7 +49,7 @@ if has("gui_running")
     "set go=c
     " Console + X11 Clipboard
     set go=ca
-    set guifont=Ubuntu\ Mono\ 13
+    set guifont=Monospace\ 12
 endif
 
 if has("win32")

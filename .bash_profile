@@ -7,6 +7,4 @@ fi
 
 # User specific environment and startup programs
 
-# Enable SCLs
-source scl_source enable sclo-git25
-source scl_source enable sclo-vagrant1
+export QT_AUTO_SCREEN_SCALE_FACTOR=0
