@@ -39,8 +39,8 @@ bindsym $mod+Shift+q kill
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+# bindsym $mod+d exec --no-startup-id dmenu_run
 
 # change focus
 bindsym $mod+h focus left
@@ -170,13 +170,13 @@ bar {
         tray_output primary
         position bottom
         colors {
-            background #222222
-            statusline #dddddd
-            separator #666666
-            focused_workspace  #285577 #285577 #ffffff
-            active_workspace   #555555 #555555 #888888
-            inactive_workspace #555555 #555555 #eeeeee
-            urgent_workspace   #2f343a #900000 #ffffff
+	    background #222222
+	    statusline #dddddd
+	    separator #666666
+	    focused_workspace #0088CC #0088CC #ffffff
+	    active_workspace #333333 #333333 #888888
+	    inactive_workspace #333333 #333333 #888888
+	    urgent_workspace   #2f343a #900000 #ffffff
         }
 }
 
@@ -189,9 +189,10 @@ exec --no-startup-id xset r rate 200 25
 #exec --no-startup-id xinput set-prop 13 288 1
 #exec --no-startup-id sleep 2 && xrandr --output VGA1 --above LVDS1
 #exec --no-startup-id sh -c 'source ~/.fehbg'
-exec --no-startup-id xsetroot -solid '#536878'
+exec --no-startup-id xsetroot -solid '#2d2d2d''
 exec --no-startup-id /usr/bin/nm-applet &
-exec --no-startup-id /usr/libexec/polkit-gnome-authentication-agent-1 &
+#exec --no-startup-id /usr/libexec/polkit-gnome-authentication-agent-1 &
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 #exec --no-startup-id xrdb -load ~/.Xresources
 #exec --no-startup-id echo 'power on' | bluetoothctl
 exec --no-startup-id sh -c 'echo connect | bluetoothctl'
@@ -212,10 +213,9 @@ assign [class="Chromium"] $w2
 assign [class="Firefox"] $w2
 #assign [class="vlc"] $media
 
-
 # class                 border  backgr. text    indicator
-client.focused          #285577 #285577 #ffffff #00ffff
-client.focused_inactive #999999 #777777 #ffffff #00ffff
-client.unfocused        #999999 #777777 #eeeeee #00ffff
-client.urgent           #2f343a #900000 #ffffff #00ffff
-client.placeholder      #000000 #0c0c0c #ffffff #00ffff
+client.focused          #0088CC #0088CC #ffffff #dddddd
+client.focused_inactive #0C2D3C #0C2D3C #888888 #484e50
+client.focused_inactive #333333 #333333 #888888 #292d2e
+client.unfocused        #333333 #333333 #888888 #292d2e
+client.urgent           #2f343a #900000 #ffffff #900000
