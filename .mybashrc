@@ -1,0 +1,16 @@
+export QT_AUTO_SCREEN_SCALE_FACTOR=0
+export VAGRANT_DEFAULT_PROVIDER=virtualbox
+export QT_QPA_PLATFORMTHEME=qt5ct
+export EDITOR=vim
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias x='startx'
+#alias screen='tmux'
+
+
+case "$TERM" in
+    screen*) PROMPT_COMMAND='echo -ne "\033k\033\0134"'
+esac
+

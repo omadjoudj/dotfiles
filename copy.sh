@@ -6,5 +6,5 @@ cp ~/.Xresources .
 cp ~/.vimrc .
 cp ~/.screenrc .
 #cp ~/.tmux.conf .
-cp ~/.bashrc .
+cp ~/.mybashrc .
 cp ~/.bash_profile .

@@ -16,7 +16,7 @@ set $mod Mod4
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:Monospace 10
+font pango:Sans 11
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -39,14 +39,15 @@ bindsym $mod+Shift+q kill
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 # bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec --no-startup-id dmenu_run -l 5 -fn Monospace:11.5  -p 'RUN>>>'
 
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
-bindsym $mod+l focus right
+#bindsym $mod+l focus right
 
 # MSWin memory muscle
 bindsym Mod1+Tab workspace back_and_forth
@@ -66,7 +67,7 @@ bindsym $mod+Right focus right
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+#bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -104,6 +105,12 @@ set $w1 1:term
 set $w2 2:web
 set $w3 3
 #set $w3 3:remote
+
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
 
 # switch to workspace
 bindsym $mod+1 workspace $w1
@@ -161,7 +168,7 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-bindsym Control+Mod1+l exec --no-startup-id i3lock -d -f -c 000000
+bindsym $mod+l exec --no-startup-id i3lock -d -f -c 000000
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -170,13 +177,13 @@ bar {
         tray_output primary
         position bottom
         colors {
-	    background #222222
-	    statusline #dddddd
-	    separator #666666
-	    focused_workspace #0088CC #0088CC #ffffff
-	    active_workspace #333333 #333333 #888888
-	    inactive_workspace #333333 #333333 #888888
-	    urgent_workspace   #2f343a #900000 #ffffff
+            background #222222
+            statusline #dddddd
+            separator #666666
+            focused_workspace  #285577 #285577 #ffffff
+            active_workspace   #555555 #555555 #888888
+            inactive_workspace #555555 #555555 #eeeeee
+            urgent_workspace   #2f343a #900000 #ffffff
         }
 }
 
@@ -189,13 +196,14 @@ exec --no-startup-id xset r rate 200 25
 #exec --no-startup-id xinput set-prop 13 288 1
 #exec --no-startup-id sleep 2 && xrandr --output VGA1 --above LVDS1
 #exec --no-startup-id sh -c 'source ~/.fehbg'
-exec --no-startup-id xsetroot -solid '#2d2d2d''
+exec --no-startup-id xsetroot -solid '#2d2d2d'
 exec --no-startup-id /usr/bin/nm-applet &
 #exec --no-startup-id /usr/libexec/polkit-gnome-authentication-agent-1 &
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+exec --no-startup-id /usr/lib/polkit-gnome-authentication-agent-1 &
 #exec --no-startup-id xrdb -load ~/.Xresources
-#exec --no-startup-id echo 'power on' | bluetoothctl
+exec --no-startup-id echo 'power on' | bluetoothctl
 exec --no-startup-id sh -c 'echo connect | bluetoothctl'
+exec --no-startup-id redshift&
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && notify-send 'Volume increased by +5%'
@@ -214,8 +222,26 @@ assign [class="Firefox"] $w2
 #assign [class="vlc"] $media
 
 # class                 border  backgr. text    indicator
-client.focused          #0088CC #0088CC #ffffff #dddddd
-client.focused_inactive #0C2D3C #0C2D3C #888888 #484e50
-client.focused_inactive #333333 #333333 #888888 #292d2e
-client.unfocused        #333333 #333333 #888888 #292d2e
-client.urgent           #2f343a #900000 #ffffff #900000
+client.focused          #285577 #285577 #ffffff #00ffff
+client.focused_inactive #999999 #777777 #ffffff #00ffff
+client.unfocused        #999999 #777777 #eeeeee #00ffff
+client.urgent           #2f343a #900000 #ffffff #00ffff
+client.placeholder      #000000 #0c0c0c #ffffff #00ffff
+
+## Shutdown menu
+set $Locker i3lock -d -f -c 000000 && sleep 1
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id $Locker, mode "default"
+    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
+    bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"  
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+P mode "$mode_system"
