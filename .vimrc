@@ -1,8 +1,7 @@
 " Plugins (any line with the marker will be git-cloned into vim dir)
 "__ https://github.com/scrooloose/nerdtree
-"__ https://github.com/itchyny/lightline.vim
-"__ https://github.com/ap/vim-buftabline
-"
+"__ https://github.com/tomasiser/vim-code-dark
+"__ https://github.com/vim-airline/vim-airline.git
 
 " Basic settings
 set tabstop=8
@@ -34,14 +33,8 @@ set hidden "dont ask about unsaved buffers
 set background=dark
 set wildmenu
 set path+=**
-colorscheme ron
+colorscheme codedark
 set cursorline
-
-" colorscheme fixes
-hi CursorLine cterm=none term=none
-hi Pmenu ctermbg=darkgrey ctermfg=white guibg=darkgrey guifg=white
-hi PmenuSel ctermbg=darkblue ctermfg=white guibg=darkblue guifg=white
-
 
 if has("gui_running")
     "set guioptions-=T
@@ -49,7 +42,7 @@ if has("gui_running")
     "set go=c
     " Console + X11 Clipboard
     set go=ca
-    set guifont=Monospace\ 12
+    set guifont=Monospace\ 11
 endif
 
 if has("win32")
@@ -63,6 +56,11 @@ endif
 
 " Folding
 "set foldmethod=indent
+
+" Airline settings
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme = 'codedark'
+let g:airline_powerline_fonts = 1
 
 autocmd CompleteDone * pclose
 filetype plugin indent on
