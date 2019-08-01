@@ -11,7 +11,7 @@ term 'screen-256color'
 defscrollback 10000
 shelltitle '$ |bash'
 #attrcolor b ".I"
-#rendition so = gk
+rendition so = gk
 #term xterm
 #termcapinfo xterm* ti@:te@
 
