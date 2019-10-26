@@ -1,7 +1,14 @@
-" Plugins (any line with the marker will be git-cloned into vim dir)
-"__ https://github.com/scrooloose/nerdtree
-"__ https://github.com/tomasiser/vim-code-dark
-"__ https://github.com/vim-airline/vim-airline.git
+
+packadd minpac
+
+call minpac#init()
+
+" minpac must have {'type': 'opt'} so that it can be loaded with `packadd`.
+call minpac#add('k-takata/minpac', {'type': 'opt'})
+" Add other plugins here.
+call minpac#add('scrooloose/nerdtree')
+call minpac#add('tomasiser/vim-code-dark')
+call minpac#add('vim-airline/vim-airline')
 
 " Basic settings
 set tabstop=8
