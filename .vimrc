@@ -1,14 +1,11 @@
 
-packadd minpac
+call plug#begin('~/.vim/plugged')
 
-call minpac#init()
+Plug 'scrooloose/nerdtree'
+Plug 'tomasiser/vim-code-dark'
+Plug 'vim-airline/vim-airline'
 
-" minpac must have {'type': 'opt'} so that it can be loaded with `packadd`.
-call minpac#add('k-takata/minpac', {'type': 'opt'})
-" Add other plugins here.
-call minpac#add('scrooloose/nerdtree')
-call minpac#add('tomasiser/vim-code-dark')
-call minpac#add('vim-airline/vim-airline')
+call plug#end()
 
 " Basic settings
 set tabstop=8
