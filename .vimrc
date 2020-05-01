@@ -4,6 +4,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'tomasiser/vim-code-dark'
 Plug 'vim-airline/vim-airline'
+Plug 'ctrlpvim/ctrlp.vim'
 
 call plug#end()
 
@@ -84,10 +85,10 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
-nmap <C-j> :bp<CR>
-imap <C-j> :bp<CR>
-nmap <C-k> :bn<CR>
-imap <C-k> :bn<CR>
+"nmap <C-j> :bp<CR>
+"imap <C-j> :bp<CR>
+"nmap <C-k> :bn<CR>
+"imap <C-k> :bn<CR>
 
 " vim password manager
 set cryptmethod=blowfish
@@ -107,8 +108,8 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 " Highlight extra stuff
 autocmd Syntax * call matchadd('Todo',  '\W\zs\(TODO\|FIXME\|CHANGED\|XXX\|BUG\|HACK\)')
 autocmd Syntax * call matchadd('Debug', '\W\zs\(NOTE\|INFO\|IDEA\)')
-highlight link sensibleWhitespaceError Error
-autocmd Syntax * syntax match sensibleWhitespaceError excludenl /\s\+\%#\@<!$\| \+\ze\t/ display containedin=ALL
+"highlight link sensibleWhitespaceError Error
+"autocmd Syntax * syntax match sensibleWhitespaceError excludenl /\s\+\%#\@<!$\| \+\ze\t/ display containedin=ALL
 
 ab __fp Othman Madjoudj <athmane@fedoraproject.org>
 ab __ms Othman Madjoudj <omadjoudj@mirantis.com>
