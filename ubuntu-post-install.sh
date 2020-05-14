@@ -9,7 +9,7 @@ sudo apt remove nfs-kernel-server
 
 sudo snap install  keepassxc spotify vlc
 
-for i in vscode zaproxy skype ; do
+for i in code zaproxy skype ; do
   sudo snap install --classic $i
 done
 
