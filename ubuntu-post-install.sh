@@ -1,6 +1,6 @@
 sudo apt install ecryptfs-utils cryptsetup vim vim-gtk3 virtualbox vagrant byobu build-essential ufw gufw \
          gnome-tweak-tool gnome-shell-extension-caffeine clamtk clamdscan git fonts-powerline xterm putty \
-         calibre fonts-terminus xfonts-terminus sshuttle autossh i3 rofi ansible ansible-lint
+         calibre fonts-terminus xfonts-terminus sshuttle autossh i3 rofi ansible ansible-lint aria2
 
 sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager virtinst wireshark
 
