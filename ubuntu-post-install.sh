@@ -5,7 +5,7 @@ sudo apt install ecryptfs-utils cryptsetup vim vim-gtk3 virtualbox vagrant byobu
          geoip-bin firetools firejail 
 
 
-sudo apt remove nfs-kernel-server
+sudo apt remove nfs-kernel-server rpcbind
 
 sudo snap install  keepassxc spotify vlc
 
