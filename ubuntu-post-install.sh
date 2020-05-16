@@ -1,3 +1,6 @@
+#!/bin/bash -x
+## ~omadjoudj
+
 sudo apt -y  install ecryptfs-utils cryptsetup vim vim-gtk3 virtualbox vagrant byobu build-essential gufw ufw \
              gnome-tweak-tool gnome-shell-extension-caffeine clamtk clamdscan git fonts-powerline xterm putty \
              calibre fonts-terminus xfonts-terminus sshuttle autossh i3 rofi ansible ansible-lint aria2 whois \
@@ -28,6 +31,12 @@ sudo systemctl stop cups.socket cups.path
 # Disable Avahi 
 sudo systemctl disable avahi-daemon.socket avahi-daemon.service
 sudo systemctl stop avahi-daemon.socket avahi-daemon.service
+
+
+# Enable the Firewall
+sudo ufw enable
+sudo ufw default deny incoming
+
 
 
 
