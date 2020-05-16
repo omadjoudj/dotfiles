@@ -42,7 +42,7 @@ bindsym $mod+Shift+q kill
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 # bindsym $mod+d exec --no-startup-id dmenu_run
-bindsym $mod+d exec --no-startup-id dmenu_run -l 5 -fn Ubuntu\ Mono:11.5  -p 'RUN>>>'
+bindsym $mod+d exec --no-startup-id dmenu_run -l 5 -fn Ubuntu\ Mono:12  -p 'RUN>>>'
 
 # change focus
 bindsym $mod+h focus left
