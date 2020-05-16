@@ -38,6 +38,15 @@ sudo ufw enable
 sudo ufw default deny incoming
 
 
+# sysctl: disable ipv6 and swapping
+
+echo 'net.ipv4.icmp_echo_ignore_all = 1' | tee -a /etc/sysctl.d/99-network-security.conf
+echo 'net.ipv6.conf.all.disable_ipv6 = 1'  | tee -a /etc/sysctl.d/99-network-security.conf
+echo 'net.ipv6.conf.default.disable_ipv6 = 1'  | tee -a /etc/sysctl.d/99-network-security.conf
+echo 'net.ipv6.conf.lo.disable_ipv6 = 1'  | tee -a /etc/sysctl.d/99-network-security.conf
+
+echo 'vm.swappiness = 0' | tee -a /etc/sysctl.d/99-swap.conf
+
 
 
 ## Vim
