@@ -53,3 +53,4 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     
 curl -o ~/.bashgit https://raw.githubusercontent.com/oyvindstegard/bashgit/master/.bashgit
 
+curl -o ~/.vimrc https://raw.githubusercontent.com/omadjoudj/dotfiles/master/.vimrc
