@@ -16,7 +16,7 @@ set $mod Mod4
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:Sans 11
+font pango:Ubuntu Mono 12
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -29,7 +29,8 @@ font pango:Sans 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id /usr/bin/i3-sensible-terminal
+#bindsym $mod+Return exec --no-startup-id /usr/bin/i3-sensible-terminal
+bindsym $mod+Return exec --no-startup-id unset SESSION_MANAGER && xterm
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -41,7 +42,7 @@ bindsym $mod+Shift+q kill
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 # bindsym $mod+d exec --no-startup-id dmenu_run
-bindsym $mod+d exec --no-startup-id dmenu_run -l 5 -fn Monospace:11.5  -p 'RUN>>>'
+bindsym $mod+d exec --no-startup-id dmenu_run -l 5 -fn Ubuntu\ Mono:11.5  -p 'RUN>>>'
 
 # change focus
 bindsym $mod+h focus left
@@ -198,8 +199,8 @@ exec --no-startup-id xset r rate 200 25
 #exec --no-startup-id sh -c 'source ~/.fehbg'
 exec --no-startup-id xsetroot -solid '#2d2d2d'
 exec --no-startup-id /usr/bin/nm-applet &
-#exec --no-startup-id /usr/libexec/polkit-gnome-authentication-agent-1 &
-exec --no-startup-id /usr/lib/polkit-gnome-authentication-agent-1 &
+exec --no-startup-id /usr/libexec/polkit-gnome-authentication-agent-1 &
+#exec --no-startup-id /usr/lib/polkit-gnome-authentication-agent-1 &
 #exec --no-startup-id xrdb -load ~/.Xresources
 exec --no-startup-id echo 'power on' | bluetoothctl
 exec --no-startup-id sh -c 'echo connect | bluetoothctl'
