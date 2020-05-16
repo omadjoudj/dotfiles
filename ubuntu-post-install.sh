@@ -1,9 +1,8 @@
 sudo apt install ecryptfs-utils cryptsetup vim vim-gtk3 virtualbox vagrant byobu build-essential gufw ufw \
          gnome-tweak-tool gnome-shell-extension-caffeine clamtk clamdscan git fonts-powerline xterm putty \
          calibre fonts-terminus xfonts-terminus sshuttle autossh i3 rofi ansible ansible-lint aria2 whois \
-         geoip-bin nmap firetools firejail 
-
-sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager virtinst wireshark
+         qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager virtinst wireshark nmap \
+         geoip-bin firetools firejail 
 
 
 sudo apt remove nfs-kernel-server
