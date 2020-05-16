@@ -7,9 +7,6 @@ sudo apt -y  install ecryptfs-utils cryptsetup vim vim-gtk3 virtualbox vagrant b
              qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager virtinst wireshark nmap \
              geoip-bin firetools firejail 
 
-
-sudo apt remove nfs-kernel-server rpcbind
-
 sudo snap install  keepassxc spotify vlc
 
 for i in code zaproxy skype ; do
