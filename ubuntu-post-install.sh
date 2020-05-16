@@ -48,9 +48,9 @@ echo 'vm.swappiness = 0' | sudo tee -a /etc/sysctl.d/99-swap.conf
 
 ## Vim
 
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+#curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+#    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     
-curl -o ~/.bashgit https://raw.githubusercontent.com/oyvindstegard/bashgit/master/.bashgit
+#curl -o ~/.bashgit https://raw.githubusercontent.com/oyvindstegard/bashgit/master/.bashgit
 
-curl -o ~/.vimrc https://raw.githubusercontent.com/omadjoudj/dotfiles/master/.vimrc
+#curl -o ~/.vimrc https://raw.githubusercontent.com/omadjoudj/dotfiles/master/.vimrc
