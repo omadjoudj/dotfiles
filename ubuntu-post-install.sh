@@ -9,7 +9,7 @@ sudo apt -y  install ecryptfs-utils cryptsetup vim vim-gtk3 virtualbox vagrant b
 
 sudo snap install  keepassxc spotify vlc
 
-for i in code zaproxy skype ; do
+for i in code skype ; do
   sudo snap install --classic $i
 done
 
