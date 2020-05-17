@@ -7,7 +7,7 @@ sudo apt -y  install ecryptfs-utils cryptsetup vim vim-gtk3 virtualbox vagrant b
              qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager virtinst wireshark nmap \
              geoip-bin firetools firejail 
 
-sudo snap install  keepassxc spotify vlc
+sudo snap install  keepassxc spotify vlc ffmpeg
 
 for i in code skype ; do
   sudo snap install --classic $i
