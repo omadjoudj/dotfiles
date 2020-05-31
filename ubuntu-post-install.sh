@@ -5,7 +5,7 @@ sudo apt -y  install ecryptfs-utils cryptsetup vim vim-gtk3 virtualbox vagrant b
              gnome-tweak-tool gnome-shell-extension-caffeine clamtk clamdscan git fonts-powerline xterm putty \
              calibre fonts-terminus xfonts-terminus sshuttle autossh i3 rofi ansible ansible-lint aria2 whois \
              qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager virtinst wireshark nmap \
-             geoip-bin firetools firejail 
+             geoip-bin firetools firejail virtualbox-ext-pack virtualbox-guest-additions-iso
 
 sudo snap install  keepassxc spotify vlc ffmpeg
 
