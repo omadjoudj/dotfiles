@@ -47,7 +47,9 @@ if has("gui_running")
     "set guioptions-=m
     "set go=c
     " Console + X11 Clipboard
-    set go=ca
+    " set go=ca
+    " Console + X11 Clipbaord + Menu
+    set go=cam
     set guifont=Monospace\ 11
 endif
 
