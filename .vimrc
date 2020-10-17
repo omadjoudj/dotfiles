@@ -4,8 +4,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'tomasiser/vim-code-dark'
 Plug 'vim-airline/vim-airline'
-"Plug 'ctrlpvim/ctrlp.vim'
-"Plug 'tpope/vim-fugitive'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
@@ -47,9 +47,7 @@ if has("gui_running")
     "set guioptions-=m
     "set go=c
     " Console + X11 Clipboard
-    " set go=ca
-    " Console + X11 Clipbaord + Menu
-    set go=cam
+    set go=ca
     set guifont=Monospace\ 11
 endif
 
@@ -78,9 +76,11 @@ filetype plugin indent on
 au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 
 " Keymaps
-"map <leader>p "+gP
-"map <leader>y "+y
+map <leader>p "+gP
+map <leader>y "+y
 map <leader>r :make<CR>
+map <leader>m :make<CR>
+"nnoremap <F4> :make!<cr>
 map <leader>s :set spell!<CR>
 map <leader>e :NERDTreeToggle<CR>
 
