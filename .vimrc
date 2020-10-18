@@ -6,6 +6,7 @@ Plug 'tomasiser/vim-code-dark'
 Plug 'vim-airline/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'vim-syntastic/syntastic'
 
 call plug#end()
 
@@ -100,7 +101,7 @@ set cryptmethod=blowfish
 autocmd FileType spec set makeprg=rpmbuild\ -ba\ %
 autocmd FileType yaml set makeprg=ansible-lint\ %
 autocmd BufWritePost,FileWritePost *.go execute 'Lint' | cwindow
-"autocmd FileType python set makeprg=python\ %
+autocmd FileType python set makeprg=python\ %
 "autocmd FileType python set makeprg=pyflakes\ %
 "autocmd FileType python set errorformat=%f:%l:\ %m
 "autocmd BufWritePost *.py !flake8 %
