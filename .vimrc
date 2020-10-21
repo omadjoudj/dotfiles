@@ -7,6 +7,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-syntastic/syntastic'
+Plug 'mhinz/vim-startify'
 
 call plug#end()
 
