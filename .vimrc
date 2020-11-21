@@ -6,7 +6,7 @@
 ""
 call plug#begin('~/.vim/plugged')
 
-Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-vinegar'
 Plug 'tomasiser/vim-code-dark'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
@@ -92,7 +92,7 @@ map <leader>r :make!<CR>
 map <leader>m :make<CR>
 "nnoremap <F4> :make!<cr>
 map <leader>s :set spell!<CR>
-map <leader>e :NERDTreeToggle<CR>
+"map <leader>e :NERDTreeToggle<CR>
 
 noremap <Up> <NOP>
 noremap <Down> <NOP>
