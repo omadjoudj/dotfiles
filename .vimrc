@@ -105,7 +105,7 @@ imap <C-k> :bn<CR>
 
 " Fzf
 nnoremap <leader><leader>       :Files<CR>
-nnoremap <leader><CR>     :Buffers<CR>
+nnoremap <tab><tab>     :Buffers<CR>
 " nnoremap <leader>l       :Lines<CR>
 nnoremap <leader>h        :History<CR>
 
