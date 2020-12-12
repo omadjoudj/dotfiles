@@ -5,13 +5,14 @@ sudo apt -y  install ecryptfs-utils cryptsetup vim vim-gtk3 virtualbox vagrant b
              gnome-tweak-tool gnome-shell-extension-caffeine clamtk clamdscan git fonts-powerline xterm putty \
              calibre fonts-terminus xfonts-terminus sshuttle autossh i3 rofi ansible ansible-lint aria2 whois \
              qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager virtinst wireshark nmap \
-             geoip-bin firetools firejail virtualbox-ext-pack virtualbox-guest-additions-iso gnome-shell-extension-system-monitor
+             geoip-bin firetools firejail virtualbox-ext-pack virtualbox-guest-additions-iso gnome-shell-extension-system-monitor \
+             freerdp2-x11 xdotool
 
 sudo snap install  keepassxc spotify vlc ffmpeg brave onlyoffice-desktopeditors spotify
 
-for i in code skype ; do
-  sudo snap install --classic $i
-done
+#for i in code skype ; do
+#  sudo snap install --classic $i
+#done
 
 
 ## Cleaning up default install
