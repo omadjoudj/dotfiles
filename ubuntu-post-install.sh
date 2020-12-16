@@ -8,7 +8,7 @@ sudo apt -y  install ecryptfs-utils cryptsetup vim vim-gtk3 virtualbox vagrant b
              geoip-bin firetools firejail virtualbox-ext-pack virtualbox-guest-additions-iso gnome-shell-extension-system-monitor \
              freerdp2-x11 xdotool
 
-sudo snap install  keepassxc spotify vlc ffmpeg brave onlyoffice-desktopeditors spotify
+sudo snap install  keepassxc spotify vlc ffmpeg onlyoffice-desktopeditors spotify
 
 #for i in code skype ; do
 #  sudo snap install --classic $i
