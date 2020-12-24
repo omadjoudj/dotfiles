@@ -1,0 +1,55 @@
+#!/bin/bash
+
+SANDBOX="/tmp/firefox-sandbox"
+TEMP_USER_PROFILE="`mktemp -d $SANDBOX/profile.pfox.tmp.XXXXXXXX`"
+#google-chrome-stable \
+#--no-first-run \
+#--incognito \
+#--proxy-server="socks5://localhost:1080" \
+#--host-resolver-rules="MAP * 0.0.0.0" \
+#--user-data-dir=$TEMP_USER_PROFILE \
+#https://duckduckgo.com/
+
+cat << EOF > $TEMP_USER_PROFILE/prefs.js
+user_pref("network.proxy.socks", "127.0.0.1");
+user_pref("network.proxy.socks_port", 1080);
+user_pref("network.proxy.socks_remote_dns", true);
+user_pref("network.proxy.type", 1);
+user_pref("browser.urlbar.placeholderName", "DuckDuckGo");
+user_pref("app.update.lastUpdateTime.search-engine-update-timer", 0);
+user_pref("app.update.lastUpdateTime.services-settings-poll-changes", 0);
+user_pref("general.useragent.override", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.10; rv:70.0) Gecko/20100101 Firefox/70.0");
+#user_pref("general.useragent.override", "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0");
+EOF
+
+
+#bwrap --bind / / --dev /dev --tmpfs /run --unshare-net firefox -profile $TEMP_USER_PROFILE -no-remote -private
+
+mkdir $SANDBOX
+mkdir $SANDBOX/Downloads
+
+firejail --apparmor --seccomp --private firefox  -no-remote -private
+
+rm -rf $TEMP_USER_PROFILE
+
+#chmod -R 777 $SANDBOX
+#/usr/bin/uuidgen | /usr/bin/tr -d '-'  > $SANDBOX/machine-id
+
+
+#/usr/bin/bwrap \
+#    --dev /dev \
+#    --tmpfs /run \
+#    --bind / / \
+#    --setenv HOME $SANDBOX \
+#    --unshare-user \
+#    --uid 200 --gid 400 \
+#    --ro-bind $SANDBOX/machine-id /etc/machine-id \
+#    /usr/bin/firefox  -profile $TEMP_USER_PROFILE -no-remote -private
+#
+##    --unshare-net \
+#    --bind $SANDBOX/.mozilla /home/r/.mozilla \
+#    --uid `id -u nobody` --gid `id -g nobody` \
+#    --bind $SANDBOX/Downloads /home/r/Downloads \
+
+
+
