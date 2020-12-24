@@ -45,7 +45,12 @@ echo 'net.ipv6.conf.lo.disable_ipv6 = 1'  | sudo tee -a /etc/sysctl.d/99-network
 
 echo 'vm.swappiness = 0' | sudo tee -a /etc/sysctl.d/99-swap.conf
 
+##
 
+wget -q -O - https://deb.torproject.org/torproject.org/A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89.asc | sudo apt-key add -
+echo "deb https://deb.torproject.org/torproject.org $(lsb_release -cs) main" | sudo tee -a /etc/apt/sources.list.d/torproject.list
+sudo apt update
+sudo apt install -y tor deb.torproject.org-keyring torbrowser-launcher
 
 ## Vim
 
