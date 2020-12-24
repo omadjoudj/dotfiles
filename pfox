@@ -1,7 +1,9 @@
-#!/bin/bash
+#!/bin/bash -x
 
-SANDBOX="/tmp/firefox-sandbox"
-TEMP_USER_PROFILE="`mktemp -d $SANDBOX/profile.pfox.tmp.XXXXXXXX`"
+SANDBOX="/tmp/firefox-sandbox/"
+mkdir -p $SANDBOX
+mkdir -p $SANDBOX/.mozila/firefox
+TEMP_USER_PROFILE="`mktemp -d $SANDBOX/.mozila/firefox/profile.pfox.tmp.XXXXXXXX`"
 #google-chrome-stable \
 #--no-first-run \
 #--incognito \
@@ -22,34 +24,42 @@ user_pref("general.useragent.override", "Mozilla/5.0 (Macintosh; Intel Mac OS X 
 #user_pref("general.useragent.override", "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0");
 EOF
 
-
 #bwrap --bind / / --dev /dev --tmpfs /run --unshare-net firefox -profile $TEMP_USER_PROFILE -no-remote -private
 
-mkdir $SANDBOX
-mkdir $SANDBOX/Downloads
-
-firejail --apparmor --seccomp --private firefox  -no-remote -private
-
-rm -rf $TEMP_USER_PROFILE
-
 #chmod -R 777 $SANDBOX
-#/usr/bin/uuidgen | /usr/bin/tr -d '-'  > $SANDBOX/machine-id
+#firejail --noprofile --apparmor --seccomp --private=$SANDBOX firefox -profile $TEMP_USER_PROFILE -no-remote -private
+
+#rm -rf $TEMP_USER_PROFILE
+
+/usr/bin/uuidgen | /usr/bin/tr -d '-'  > $SANDBOX/machine-id
 
 
-#/usr/bin/bwrap \
-#    --dev /dev \
-#    --tmpfs /run \
-#    --bind / / \
-#    --setenv HOME $SANDBOX \
-#    --unshare-user \
-#    --uid 200 --gid 400 \
-#    --ro-bind $SANDBOX/machine-id /etc/machine-id \
-#    /usr/bin/firefox  -profile $TEMP_USER_PROFILE -no-remote -private
+/usr/bin/bwrap \
+    --ro-bind /lib /lib \
+    --ro-bind /lib64 /lib64 \
+    --ro-bind /usr/lib /usr/lib \
+    --ro-bind /usr/lib64 /usr/lib64 \
+    --bind /usr /usr \
+    --proc /proc \
+    --dev /dev \
+    --ro-bind /bin /bin \
+    --bind /tmp/firefox-sandbox/ /home/$USER \
+    --uid 65534 --gid 65534 \
+    --ro-bind $SANDBOX/machine-id /etc/machine-id \
+    --share-net \
+    --tmpfs /tmp \
+    --dir /run/user/"$(id -u)" \
+    --dev-bind /dev/dri /dev/dri \
+    --ro-bind /run/user/"$(id -u)"/pulse /run/user/"$(id -u)"/pulse \
+    --ro-bind /etc/resolv.conf /etc/resolv.conf \
+    /usr/lib/firefox/firefox.sh  -profile `echo $TEMP_USER_PROFILE | sed "s|/tmp/firefox-sandbox/|$HOME|"` -no-remote -private
 #
 ##    --unshare-net \
 #    --bind $SANDBOX/.mozilla /home/r/.mozilla \
 #    --uid `id -u nobody` --gid `id -g nobody` \
 #    --bind $SANDBOX/Downloads /home/r/Downloads \
-
-
+#    --bind / / \
+#    --tmpfs /run \
+#    --setenv HOME /home/user \
+#    --unshare-user \
 
