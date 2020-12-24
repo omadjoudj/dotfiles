@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 
 SANDBOX="/tmp/firefox-sandbox/"
 mkdir -p $SANDBOX
@@ -50,6 +50,7 @@ EOF
     --tmpfs /tmp \
     --dir /run/user/"$(id -u)" \
     --dev-bind /dev/dri /dev/dri \
+    --ro-bind /etc/fonts /etc/fonts \
     --ro-bind /run/user/"$(id -u)"/pulse /run/user/"$(id -u)"/pulse \
     --ro-bind /etc/resolv.conf /etc/resolv.conf \
     /usr/lib/firefox/firefox.sh  -profile `echo $TEMP_USER_PROFILE | sed "s|/tmp/firefox-sandbox/|$HOME|"` -no-remote -private
