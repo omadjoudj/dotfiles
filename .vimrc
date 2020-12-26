@@ -98,10 +98,11 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
-nmap <C-j> :bp<CR>
-imap <C-j> :bp<CR>
-nmap <C-k> :bn<CR>
-imap <C-k> :bn<CR>
+" Use: Ctrl+^
+"nmap <C-j> :bp<CR>
+"imap <C-j> :bp<CR>
+"nmap <C-k> :bn<CR>
+"imap <C-k> :bn<CR>
 
 " Fzf
 nnoremap <leader><leader>       :Files<CR>
