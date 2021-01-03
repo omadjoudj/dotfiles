@@ -9,7 +9,7 @@ sudo apt -y  install ecryptfs-utils cryptsetup vim vim-gtk3 virtualbox vagrant b
              freerdp2-x11 xdotool zsh zsh-autosuggestions zsh-common zsh-syntax-highlighting qterminal \
              gnome-shell-extension-system-monitor lm-sensors
 
-sudo snap install  keepassxc spotify vlc ffmpeg onlyoffice-desktopeditors spotify
+sudo snap install  keepassxc spotify vlc ffmpeg spotify libreoffice #onlyoffice-desktopeditors
 
 #for i in code skype ; do
 #  sudo snap install --classic $i
