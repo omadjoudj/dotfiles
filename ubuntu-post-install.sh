@@ -7,7 +7,7 @@ sudo apt -y  install ecryptfs-utils cryptsetup vim vim-gtk3 virtualbox vagrant b
              qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager virtinst wireshark nmap \
              geoip-bin bubblewrap firejail firetools virtualbox-ext-pack virtualbox-guest-additions-iso \
              freerdp2-x11 xdotool zsh zsh-autosuggestions zsh-common zsh-syntax-highlighting qterminal \
-             gnome-shell-extension-system-monitor lm-sensors
+             gnome-shell-extension-system-monitor lm-sensors pwgen
 
 sudo snap install  keepassxc spotify vlc ffmpeg spotify libreoffice #onlyoffice-desktopeditors
 
