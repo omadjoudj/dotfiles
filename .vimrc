@@ -4,16 +4,17 @@
 "" iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim | ni $HOME/vimfiles/autoload/plug.vim -Force
 ""
 ""
+
 call plug#begin('~/.vim/plugged')
 
-Plug 'tpope/vim-vinegar'
 Plug 'tomasiser/vim-code-dark'
 Plug 'vim-airline/vim-airline'
+Plug 'preservim/nerdtree'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
-Plug 'vim-syntastic/syntastic'
 Plug 'mhinz/vim-startify'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+Plug 'vim-syntastic/syntastic'
+
 
 
 call plug#end()
@@ -58,7 +59,7 @@ if has("gui_running")
     "set go=c
     " Console + X11 Clipboard
     set go=ca
-    set guifont=Monospace\ 11
+    set guifont=Ubuntu\ Mono\ 13
 endif
 
 if has("win32")
@@ -88,27 +89,22 @@ au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 " Keymaps
 map <leader>p "+gP
 map <leader>y "+y
-map <leader>r :make!<CR>
-map <leader>m :make<CR>
-"nnoremap <F4> :make!<cr>
+map <leader>r :make<CR>
+map <F5> :make<CR>
 map <leader>s :set spell!<CR>
-"map <leader>e :NERDTreeToggle<CR>
+map <leader>e :NERDTreeToggle<CR>
 
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
-" Use: Ctrl+^
-"nmap <C-j> :bp<CR>
-"imap <C-j> :bp<CR>
-"nmap <C-k> :bn<CR>
-"imap <C-k> :bn<CR>
+" Use Ctrl+6
+nmap <C-j> :bp<CR>
+imap <C-j> :bp<CR>
+nmap <C-k> :bn<CR>
+imap <C-k> :bn<CR>
 
-" Fzf
-nnoremap <leader><leader>       :Files<CR>
-nnoremap <tab><tab>     :Buffers<CR>
-" nnoremap <leader>l       :Lines<CR>
-nnoremap <leader>h        :History<CR>
+"map <C-]> :vsplit<CR>:execute "tag " . expand( "<cword>" )<CR>zz<C-w>p
 
 " vim password manager
 set cryptmethod=blowfish
@@ -117,7 +113,7 @@ set cryptmethod=blowfish
 autocmd FileType spec set makeprg=rpmbuild\ -ba\ %
 autocmd FileType yaml set makeprg=ansible-lint\ %
 autocmd BufWritePost,FileWritePost *.go execute 'Lint' | cwindow
-autocmd FileType python set makeprg=python\ %
+"autocmd FileType python set makeprg=python\ %
 "autocmd FileType python set makeprg=pyflakes\ %
 "autocmd FileType python set errorformat=%f:%l:\ %m
 "autocmd BufWritePost *.py !flake8 %
