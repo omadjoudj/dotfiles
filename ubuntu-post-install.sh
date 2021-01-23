@@ -15,7 +15,7 @@ sudo snap install  keepassxc spotify vlc ffmpeg spotify #onlyoffice-desktopedito
 #  sudo snap install --classic $i
 #done
 
-EXT_LIST="golang.go ms-python.python ms-toolsai.jupyter redhat.vscode-yaml streetsidesoftware.code-spell-checker vscodevim.vim vscoss.vscode-ansible ms-vscode.cpptools"
+EXT_LIST="golang.go ms-python.python ms-toolsai.jupyter ms-vscode.cmake-tools ms-vscode.cpptools redhat.vscode-yaml vscodevim.vim vscoss.vscode-ansible"
 
 for i in $EXT_LIST; do
       code --install-extension $i
