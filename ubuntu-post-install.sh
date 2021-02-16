@@ -52,6 +52,15 @@ echo 'net.ipv6.conf.lo.disable_ipv6 = 1'  | sudo tee -a /etc/sysctl.d/99-network
 echo 'vm.swappiness = 0' | sudo tee -a /etc/sysctl.d/99-swap.conf
 
 
+## Oracle VirtualBox, the one in the repos is a bit old
+
+echo "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib" | sudo tee /etc/apt/sources.list.d/vbox.list
+wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install virtualbox-6.1
+
+
 ## Docker
 
 #sudo apt-get -y install \
