@@ -1,13 +1,13 @@
 #!/bin/bash -x
 ## ~omadjoudj
 
-sudo apt -y  install ecryptfs-utils cryptsetup vim vim-gtk3 virtualbox vagrant byobu build-essential gufw ufw \
+sudo apt -y  install ecryptfs-utils cryptsetup vim vim-gtk3 vagrant byobu build-essential gufw ufw \
              gnome-tweak-tool gnome-shell-extension-caffeine clamtk clamdscan git fonts-powerline xterm putty \
              calibre fonts-terminus xfonts-terminus sshuttle autossh i3 rofi ansible ansible-lint aria2 whois \
              qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager virtinst wireshark nmap \
-             geoip-bin bubblewrap firejail firetools virtualbox-ext-pack virtualbox-guest-additions-iso \
+             geoip-bin bubblewrap firejail firetools gnome-shell-extension-system-monitor lm-sensors fonts-crosextra-carlito \
              freerdp2-x11 xdotool zsh zsh-autosuggestions zsh-common zsh-syntax-highlighting pwgen \
-             gnome-shell-extension-system-monitor lm-sensors fonts-crosextra-carlito 
+             
 
 sudo snap install  keepassxc spotify vlc ffmpeg spotify #onlyoffice-desktopeditors
 
