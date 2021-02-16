@@ -10,11 +10,11 @@ sudo apt -y  install ecryptfs-utils cryptsetup vim vim-gtk3 vagrant byobu build-
              
 
 sudo snap install  keepassxc spotify vlc ffmpeg spotify libreoffice
-sudo snap install --classic go
 
 #for i in code skype ; do
-#  sudo snap install --classic $i
-#done
+for i in go powershell; do
+  sudo snap install --classic $i
+done
 
 EXT_LIST="golang.go ms-python.python ms-toolsai.jupyter ms-vscode.cmake-tools ms-vscode.cpptools redhat.vscode-yaml vscodevim.vim vscoss.vscode-ansible"
 
@@ -60,6 +60,14 @@ wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-
 wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
 sudo apt-get update
 sudo apt-get install virtualbox-6.1
+
+## VScode (snap is a bit slow to start)
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
+sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+sudo apt install apt-transport-https
+sudo apt update
+sudo apt install code # or code-insiders
 
 
 ## Docker
