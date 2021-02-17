@@ -6,20 +6,14 @@ sudo apt -y  install ecryptfs-utils cryptsetup vim vim-gtk3 vagrant byobu build-
              calibre fonts-terminus xfonts-terminus sshuttle autossh i3 rofi ansible ansible-lint aria2 whois \
              qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager virtinst wireshark nmap \
              geoip-bin bubblewrap firejail firetools gnome-shell-extension-system-monitor lm-sensors fonts-crosextra-carlito \
-             freerdp2-x11 xdotool zsh zsh-autosuggestions zsh-common zsh-syntax-highlighting pwgen \
-             
+             freerdp2-x11 xdotool zsh zsh-autosuggestions zsh-common zsh-syntax-highlighting pwgen keychain \
+             python3-openstackclient python3-octaviaclient python3-heatclient
 
 sudo snap install  keepassxc spotify vlc ffmpeg spotify libreoffice
 
 #for i in code skype ; do
-for i in go powershell; do
+for i in go powershell kontena-lens helm kubectl; do
   sudo snap install --classic $i
-done
-
-EXT_LIST="golang.go ms-python.python ms-toolsai.jupyter ms-vscode.cmake-tools ms-vscode.cpptools redhat.vscode-yaml vscodevim.vim vscoss.vscode-ansible"
-
-for i in $EXT_LIST; do
-      code --install-extension $i
 done
 
 ## Cleaning up default install
@@ -68,6 +62,13 @@ sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/p
 sudo apt install apt-transport-https
 sudo apt update
 sudo apt install code # or code-insiders
+
+EXT_LIST="golang.go ms-python.python ms-toolsai.jupyter ms-vscode.cmake-tools ms-vscode.cpptools redhat.vscode-yaml vscodevim.vim vscoss.vscode-ansible"
+
+for i in $EXT_LIST; do
+      code --install-extension $i
+done
+
 
 
 ## Docker
