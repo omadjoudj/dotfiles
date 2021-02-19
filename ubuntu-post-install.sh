@@ -6,7 +6,7 @@ sudo apt -y  install ecryptfs-utils cryptsetup vim vim-gtk3 vagrant byobu build-
              calibre fonts-terminus xfonts-terminus sshuttle autossh i3 rofi ansible ansible-lint aria2 whois \
              qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager virtinst wireshark nmap \
              geoip-bin bubblewrap firejail firetools gnome-shell-extension-system-monitor lm-sensors fonts-crosextra-carlito \
-             freerdp2-x11 xdotool zsh zsh-autosuggestions zsh-common zsh-syntax-highlighting pwgen keychain \
+             freerdp2-x11 xdotool zsh zsh-autosuggestions zsh-common zsh-syntax-highlighting keychain \
              python3-openstackclient python3-octaviaclient python3-heatclient
 
 sudo snap install  keepassxc spotify vlc ffmpeg spotify libreoffice
