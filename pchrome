@@ -1,0 +1,10 @@
+#!/bin/sh
+
+TEMP_USER_PROFILE="`mktemp -d /tmp/${USER}.chrome.tmp.XXXXXXXX`"
+/opt/google/chrome/chrome \
+--no-first-run \
+--incognito \
+--proxy-server="socks5://localhost:1080" \
+--host-resolver-rules="MAP * 0.0.0.0" \
+--user-data-dir=$TEMP_USER_PROFILE \
+https://duckduckgo.com/
