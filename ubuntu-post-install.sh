@@ -1,15 +1,15 @@
 #!/bin/bash -x
 ## ~omadjoudj
 
-sudo apt -y  install ecryptfs-utils cryptsetup vim vim-gtk3 vagrant byobu build-essential gufw ufw \
-             gnome-tweak-tool gnome-shell-extension-caffeine clamtk clamdscan git fonts-powerline xterm putty \
+sudo DEBIAN_FRONTEND=noninteractive apt -y  install ecryptfs-utils cryptsetup vim vim-gtk3 vagrant byobu build-essential gufw ufw \
+             gnome-tweak-tool gnome-shell-extension-caffeine git fonts-powerline xterm putty \
              calibre fonts-terminus xfonts-terminus sshuttle autossh i3 rofi ansible ansible-lint aria2 whois \
              qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager virtinst wireshark nmap \
-             geoip-bin bubblewrap firejail firetools gnome-shell-extension-system-monitor lm-sensors fonts-crosextra-carlito \
+             geoip-bin bubblewrap gnome-shell-extension-system-monitor lm-sensors fonts-crosextra-carlito \
              freerdp2-x11 xdotool zsh zsh-autosuggestions zsh-common zsh-syntax-highlighting keychain \
-             python3-openstackclient python3-octaviaclient python3-heatclient
+             python3-openstackclient python3-octaviaclient python3-heatclient vlc
 
-sudo snap install  keepassxc spotify vlc ffmpeg spotify libreoffice
+sudo snap install  keepassxc spotify ffmpeg spotify libreoffice
 
 #for i in code skype ; do
 for i in go powershell kontena-lens helm kubectl; do
@@ -18,7 +18,7 @@ done
 
 ## Cleaning up default install
 
-sudo apt -y remove nfs-kernel-server rpcbind
+sudo DEBIAN_FRONTEND=noninteractive apt -y remove nfs-kernel-server rpcbind
 
 ##TODO: Maybe mask them as well
 
@@ -88,16 +88,9 @@ done
 #sudo apt-get update
 #sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 
-##
-
-#wget -q -O - https://deb.torproject.org/torproject.org/A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89.asc | sudo apt-key add -
-#echo "deb https://deb.torproject.org/torproject.org $(lsb_release -cs) main" | sudo tee -a /etc/apt/sources.list.d/torproject.list
-#sudo apt update
-#sudo apt install -y tor deb.torproject.org-keyring torbrowser-launcher
-
 ## Vim
 
-#curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-#    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-#curl -o ~/.vimrc https://raw.githubusercontent.com/omadjoudj/dotfiles/master/.vimrc
+curl -o ~/.vimrc https://raw.githubusercontent.com/omadjoudj/dotfiles/master/.vimrc
