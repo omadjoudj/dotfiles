@@ -1,0 +1,12 @@
+
+export EDITOR=vim
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias x='startx'
+
+#alias ssh='xdotool key shift+F10 r 2; ssh'
+alias ssh='konsoleprofile ColorScheme=Production ; ssh'
+#alias ssh='setterm --clear all --background red; ssh'
+alias passgen='openssl rand -base64 -out - $1'
+
