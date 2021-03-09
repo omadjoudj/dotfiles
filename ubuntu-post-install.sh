@@ -5,7 +5,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt -y  install ecryptfs-utils cryptsetup vi
              gnome-tweak-tool gnome-shell-extension-caffeine git fonts-powerline xterm putty \
              calibre fonts-terminus xfonts-terminus sshuttle autossh i3 rofi ansible ansible-lint aria2 whois \
              qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager virtinst wireshark nmap \
-             geoip-bin bubblewrap gnome-shell-extension-system-monitor lm-sensors fonts-crosextra-carlito \
+             geoip-bin bubblewrap lm-sensors fonts-crosextra-carlito \
              freerdp2-x11 xdotool zsh zsh-autosuggestions zsh-common zsh-syntax-highlighting keychain \
              python3-openstackclient python3-octaviaclient python3-heatclient vlc
 
