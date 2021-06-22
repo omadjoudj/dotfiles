@@ -12,8 +12,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
-Plug 'mhinz/vim-startify'
 Plug 'vim-syntastic/syntastic'
+Plug 'xolox/vim-notes'
+Plug 'xolox/vim-misc'
 
 
 
@@ -129,3 +130,5 @@ autocmd Syntax * syntax match sensibleWhitespaceError excludenl /\s\+\%#\@<!$\| 
 
 ab __fp Othman Madjoudj <athmane@fedoraproject.org>
 ab __ms Othman Madjoudj <omadjoudj@mirantis.com>
+
+let g:notes_directories = ['~/workspace/vim-notes']
