@@ -9,12 +9,12 @@ sudo DEBIAN_FRONTEND=noninteractive apt -y  install ecryptfs-utils cryptsetup vi
              freerdp2-x11 xdotool zsh zsh-autosuggestions zsh-common zsh-syntax-highlighting keychain \
              python3-openstackclient python3-octaviaclient python3-heatclient vlc
 
-sudo snap install  keepassxc spotify ffmpeg spotify onlyoffice-desktopeditors
+sudo snap install  keepassxc ffmpeg onlyoffice-desktopeditors
 
 #for i in code skype ; do
-for i in go powershell kontena-lens helm kubectl; do
-  sudo snap install --classic $i
-done
+#for i in go powershell kontena-lens helm kubectl; do
+#  sudo snap install --classic $i
+#done
 
 ## Cleaning up default install
 
@@ -49,11 +49,11 @@ echo 'vm.swappiness = 0' | sudo tee -a /etc/sysctl.d/99-swap.conf
 
 ## Oracle VirtualBox, the one in the repos is a bit old
 
-echo "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib" | sudo tee /etc/apt/sources.list.d/vbox.list
-wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
-wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
-sudo apt-get update
-sudo apt-get install -y virtualbox-6.1
+#echo "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib" | sudo tee /etc/apt/sources.list.d/vbox.list
+#wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+#wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
+#sudo apt-get update
+#sudo apt-get install -y virtualbox-6.1
 
 ## VScode (snap is a bit slow to start)
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
