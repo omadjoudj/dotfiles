@@ -2,7 +2,7 @@
 ## ~omadjoudj
 
 sudo DEBIAN_FRONTEND=noninteractive apt -y  install ecryptfs-utils cryptsetup vim vim-gtk3 vagrant byobu build-essential gufw ufw \
-             gnome-tweak-tool gnome-shell-extension-caffeine git fonts-powerline xterm putty \
+             gnome-tweak-tool gnome-shell-extension-caffeine git fonts-powerline xterm putty vagrant-libvirt vagrant-sshfs\
              calibre fonts-terminus xfonts-terminus sshuttle autossh i3 rofi ansible ansible-lint aria2 whois \
              qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager virtinst wireshark nmap \
              geoip-bin bubblewrap lm-sensors fonts-crosextra-carlito clamtk \
