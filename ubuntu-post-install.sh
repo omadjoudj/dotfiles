@@ -26,10 +26,12 @@ sudo DEBIAN_FRONTEND=noninteractive apt -y remove nfs-kernel-server rpcbind
 sudo systemctl disable cups.socket cups.path cups.service
 sudo systemctl kill --signal=SIGKILL cups.service
 sudo systemctl stop cups.socket cups.path
+sudo systemctl mask cups.socket cups.path
 
 # Disable Avahi 
 sudo systemctl disable avahi-daemon.socket avahi-daemon.service
 sudo systemctl stop avahi-daemon.socket avahi-daemon.service
+sudo systemctl mask avahi-daemon.socket avahi-daemon.service
 
 
 # Enable the Firewall
