@@ -2,8 +2,8 @@
 
 SANDBOX="/tmp/firefox-sandbox/"
 mkdir -p $SANDBOX
-mkdir -p $SANDBOX/.mozila/firefox
-TEMP_USER_PROFILE="`mktemp -d $SANDBOX/.mozila/firefox/profile.pfox.tmp.XXXXXXXX`"
+mkdir -p $SANDBOX/.mozilla/firefox
+TEMP_USER_PROFILE="`mktemp -d $SANDBOX/.mozilla/firefox/profile.pfox.tmp.XXXXXXXX`"
 #google-chrome-stable \
 #--no-first-run \
 #--incognito \
