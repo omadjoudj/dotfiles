@@ -64,3 +64,4 @@ EOF
 #    --setenv HOME /home/user \
 #    --unshare-user \
 
+rm -rf $SANDBOX
