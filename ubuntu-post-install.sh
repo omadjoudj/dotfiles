@@ -9,7 +9,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt -y  install ecryptfs-utils cryptsetup vi
              freerdp2-x11 xdotool zsh zsh-autosuggestions zsh-common zsh-syntax-highlighting keychain \
              python3-openstackclient python3-octaviaclient python3-heatclient vlc
 
-sudo snap install  keepassxc ffmpeg multipass-sshfs  multipass
+sudo snap install  keepassxc ffmpeg multipass-sshfs multipass spotify
 
 #for i in code skype ; do
 #for i in go powershell kontena-lens helm kubectl; do
