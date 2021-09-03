@@ -15,6 +15,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-syntastic/syntastic'
 Plug 'xolox/vim-notes'
 Plug 'xolox/vim-misc'
+Plug 'mhinz/vim-startify'
 
 call plug#end()
 
