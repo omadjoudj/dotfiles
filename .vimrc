@@ -10,7 +10,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'tomasiser/vim-code-dark'
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-syntastic/syntastic'
 Plug 'mhinz/vim-startify'
