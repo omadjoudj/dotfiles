@@ -17,6 +17,8 @@ Plug 'mhinz/vim-startify'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
+
+
 call plug#end()
 
 " Basic settings
@@ -103,6 +105,7 @@ nmap <C-j> :bp<CR>
 imap <C-j> :bp<CR>
 nmap <C-k> :bn<CR>
 imap <C-k> :bn<CR>
+nmap <tab><tab> :Files<CR>
 
 "map <C-]> :vsplit<CR>:execute "tag " . expand( "<cword>" )<CR>zz<C-w>p
 
@@ -127,6 +130,5 @@ autocmd Syntax * call matchadd('Debug', '\W\zs\(NOTE\|INFO\|IDEA\)')
 highlight link sensibleWhitespaceError Error
 autocmd Syntax * syntax match sensibleWhitespaceError excludenl /\s\+\%#\@<!$\| \+\ze\t/ display containedin=ALL
 
-"
 ab __fp Othman Madjoudj <athmane@fedoraproject.org>
 ab __ms Othman Madjoudj <omadjoudj@mirantis.com>
