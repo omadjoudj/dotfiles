@@ -55,11 +55,11 @@ set cursorline
 set colorcolumn=80
 
 if has("gui_running")
-    "set guioptions-=T
+    set guioptions-=T
     "set guioptions-=m
     "set go=c
     " Console + X11 Clipboard
-    set go=ca
+    "set go=ca
     set guifont=Ubuntu\ Mono\ 13
 endif
 
