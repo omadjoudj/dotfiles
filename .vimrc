@@ -12,9 +12,7 @@ Plug 'preservim/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-syntastic/syntastic'
 Plug 'mhinz/vim-startify'
-Plug 'junegunn/fzf.vim'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-
+Plug 'ctrlpvim/ctrlp.vim'
 
 
 call plug#end()
@@ -103,7 +101,6 @@ nmap <C-j> :bp<CR>
 imap <C-j> :bp<CR>
 nmap <C-k> :bn<CR>
 imap <C-k> :bn<CR>
-nmap <tab><tab> :Files<CR>
 
 "map <C-]> :vsplit<CR>:execute "tag " . expand( "<cword>" )<CR>zz<C-w>p
 
