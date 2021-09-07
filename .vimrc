@@ -7,7 +7,6 @@
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'tomasiser/vim-code-dark'
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-fugitive'
@@ -50,7 +49,7 @@ set hidden "dont ask about unsaved buffers
 set background=dark
 set wildmenu
 set path+=**
-colorscheme codedark
+colorscheme desert
 set cursorline
 set colorcolumn=80
 
@@ -78,8 +77,8 @@ endif
 " Airline settings
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
-let g:airline_theme = 'codedark'
-let g:airline_powerline_fonts = 1
+"let g:airline_theme = ''
+let g:airline_powerline_fonts = 0
 
 autocmd CompleteDone * pclose
 filetype plugin indent on
