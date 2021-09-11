@@ -8,11 +8,9 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'vim-airline/vim-airline'
-Plug 'preservim/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-syntastic/syntastic'
 Plug 'mhinz/vim-startify'
-Plug 'ctrlpvim/ctrlp.vim'
 
 
 call plug#end()
@@ -76,7 +74,7 @@ endif
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 "let g:airline_theme = ''
-let g:airline_powerline_fonts = 0
+let g:airline_powerline_fonts = 1
 
 autocmd CompleteDone * pclose
 filetype plugin indent on
@@ -84,13 +82,20 @@ filetype plugin indent on
 " automatically open and close the popup menu / preview window
 au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 
+"ProjectDrawer
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
+
 " Keymaps
 map <leader>p "+gP
 map <leader>y "+y
 map <leader>r :make<CR>
 map <F5> :make<CR>
 map <leader>s :set spell!<CR>
-map <leader>e :NERDTreeToggle<CR>
+map <leader>e :Vexplore<CR>
 
 noremap <Up> <NOP>
 noremap <Down> <NOP>
@@ -101,8 +106,6 @@ nmap <C-j> :bp<CR>
 imap <C-j> :bp<CR>
 nmap <C-k> :bn<CR>
 imap <C-k> :bn<CR>
-
-"map <C-]> :vsplit<CR>:execute "tag " . expand( "<cword>" )<CR>zz<C-w>p
 
 " vim password manager
 set cryptmethod=blowfish
@@ -124,6 +127,7 @@ autocmd Syntax * call matchadd('Todo',  '\W\zs\(TODO\|FIXME\|CHANGED\|XXX\|BUG\|
 autocmd Syntax * call matchadd('Debug', '\W\zs\(NOTE\|INFO\|IDEA\)')
 highlight link sensibleWhitespaceError Error
 autocmd Syntax * syntax match sensibleWhitespaceError excludenl /\s\+\%#\@<!$\| \+\ze\t/ display containedin=ALL
+
 
 ab __fp Othman Madjoudj <athmane@fedoraproject.org>
 ab __ms Othman Madjoudj <omadjoudj@mirantis.com>
