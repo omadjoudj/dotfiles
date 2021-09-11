@@ -11,7 +11,10 @@ Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-syntastic/syntastic'
 Plug 'mhinz/vim-startify'
-
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+"Optional
+Plug 'tomasiser/vim-code-dark'
 
 call plug#end()
 
@@ -45,7 +48,7 @@ set hidden "dont ask about unsaved buffers
 set background=dark
 set wildmenu
 set path+=**
-colorscheme desert
+colorscheme codedark
 set cursorline
 set colorcolumn=80
 
@@ -73,7 +76,7 @@ endif
 " Airline settings
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
-"let g:airline_theme = ''
+let g:airline_theme = 'codedark'
 let g:airline_powerline_fonts = 1
 
 autocmd CompleteDone * pclose
