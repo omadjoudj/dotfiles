@@ -118,7 +118,7 @@ fi
 eval `keychain --eval id_rsa id_rsa.opscare`
 export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
 export VAGRANT_DEFAULT_PROVIDER='hyperv'
-#alias m='multipass.exe'
+alias m='multipass.exe'
 alias k='kubectl.exe'
 alias kubectl='kubectl.exe'
 alias tunnel_citrix="sed -i 's/^Address=\(.*\):1494/Address=127.0.0.1:1494/' /mnt/c/Users/$USER/Downloads/*.ica"
