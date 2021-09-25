@@ -131,6 +131,7 @@ autocmd Syntax * call matchadd('Debug', '\W\zs\(NOTE\|INFO\|IDEA\)')
 highlight link sensibleWhitespaceError Error
 autocmd Syntax * syntax match sensibleWhitespaceError excludenl /\s\+\%#\@<!$\| \+\ze\t/ display containedin=ALL
 
+let g:startify_session_persistence = 1
 
 ab __fp Othman Madjoudj <athmane@fedoraproject.org>
 ab __ms Othman Madjoudj <omadjoudj@mirantis.com>
