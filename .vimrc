@@ -13,7 +13,9 @@ Plug 'vim-syntastic/syntastic'
 Plug 'mhinz/vim-startify'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-"Optional
+Plug 'fatih/vim-go'
+Plug 'davidhalter/jedi-vim'
+
 Plug 'tomasiser/vim-code-dark'
 
 call plug#end()
