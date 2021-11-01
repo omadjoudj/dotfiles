@@ -120,13 +120,17 @@ export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
 export VAGRANT_DEFAULT_PROVIDER='hyperv'
 alias multipass='multipass.exe'
 alias kubectl='kubectl.exe'
-alias tunnel_citrix="sed -i 's/^Address=\(.*\):1494/Address=127.0.0.1:1494/' /mnt/c/Users/$USER/Downloads/*.ica"
+alias m='multipass.exe'
+alias k='kubectl.exe'
+alias fix_tunnel_citrix="sed -i 's/^Address=\(.*\):1494/Address=127.0.0.1:1494/' /mnt/c/Users/$USER/Downloads/*.ica"
 
 ## X11
 export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
 export LIBGL_ALWAYS_INDIRECT=1
-#source <($HOME/.local/bin/kubectl completion bash)
+source <($HOME/.local/bin/kubectl.linux completion bash)
 
 export GIT_PS1_SHOWDIRTYSTATE=1
 #export PS1='\w$(__git_ps1 " (%s)")\$ '
 export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$(__git_ps1 " (%s)")\$ '
+
+set -o vi
