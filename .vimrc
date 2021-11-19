@@ -17,6 +17,8 @@ Plug 'fatih/vim-go'
 Plug 'davidhalter/jedi-vim'
 
 Plug 'tomasiser/vim-code-dark'
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 
 call plug#end()
 
