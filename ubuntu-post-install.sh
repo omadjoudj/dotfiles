@@ -7,7 +7,8 @@ sudo DEBIAN_FRONTEND=noninteractive apt -y  install ecryptfs-utils cryptsetup vi
              qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager virtinst wireshark nmap \
              geoip-bin bubblewrap lm-sensors fonts-crosextra-carlito clamtk qterminal universal-ctags \
              freerdp2-x11 xdotool zsh zsh-autosuggestions zsh-common zsh-syntax-highlighting keychain valgrind qtbase5-dev \
-             python3-openstackclient python3-octaviaclient python3-heatclient vlc qtcreator clazy cmake
+             python3-openstackclient python3-octaviaclient python3-heatclient vlc qtcreator clazy cmake pandoc pandoc-citeproc \
+             texlive-latex-recommended texlive-xetex texlive-luatex texlive-latex-extra context wkhtmltopdf librsvg2-bin groff
 
 sudo snap install  keepassxc ffmpeg spotify multipass-sshfs multipass vlc
 
