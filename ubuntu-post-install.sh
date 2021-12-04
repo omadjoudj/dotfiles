@@ -5,22 +5,17 @@ sudo DEBIAN_FRONTEND=noninteractive apt -y  install ecryptfs-utils cryptsetup vi
              gnome-tweak-tool gnome-shell-extension-caffeine git fonts-powerline xterm putty vagrant-libvirt vagrant-sshfs\
              calibre fonts-terminus xfonts-terminus sshuttle autossh ansible ansible-lint aria2 whois \
              qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager virtinst wireshark nmap \
-             geoip-bin bubblewrap lm-sensors fonts-crosextra-carlito clamtk qterminal universal-ctags \
+             geoip-bin bubblewrap lm-sensors fonts-crosextra-carlito clamtk qterminal universal-ctags vlc \
              freerdp2-x11 xdotool zsh zsh-autosuggestions zsh-common zsh-syntax-highlighting keychain valgrind qtbase5-dev \
              python3-openstackclient python3-octaviaclient python3-heatclient vlc qtcreator clazy cmake pandoc pandoc-citeproc \
              texlive-latex-recommended texlive-xetex texlive-luatex texlive-latex-extra context wkhtmltopdf librsvg2-bin groff wakeonlan
 
-sudo snap install  keepassxc ffmpeg spotify multipass-sshfs multipass vlc
+sudo snap install  keepassxc ffmpeg spotify multipass-sshfs multipassvlc
 
-for i in code go powershell helm kubectl; do
+for i in go powershell helm kubectl; do
  sudo snap install --classic $i
 done
 
-EXT_LIST="golang.go ms-python.python ms-toolsai.jupyter ms-vscode.cmake-tools ms-vscode.cpptools redhat.vscode-yaml vscodevim.vim vscoss.vscode-ansible"
-
-for i in $EXT_LIST; do
-      code --install-extension $i
-done
 ## Cleaning up default install
 
 sudo DEBIAN_FRONTEND=noninteractive apt -y remove nfs-kernel-server rpcbind
@@ -63,12 +58,18 @@ echo 'vm.swappiness = 0' | sudo tee -a /etc/sysctl.d/99-swap.conf
 #sudo apt-get install -y virtualbox-6.1
 
 ## VScode (snap is a bit slow to start)
-#wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
-#sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
-#sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
-#sudo apt install -y apt-transport-https
-#sudo apt update
-#sudo apt install -y code # or code-insiders
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
+sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+sudo apt install -y apt-transport-https
+sudo apt update
+sudo apt install -y code # or code-insiders
+
+EXT_LIST="golang.go ms-python.python ms-toolsai.jupyter ms-vscode.cmake-tools ms-vscode.cpptools redhat.vscode-yaml vscodevim.vim vscoss.vscode-ansible"
+
+for i in $EXT_LIST; do
+      code --install-extension $i
+done
 
 
 ## Google chrome (some stuf does not work with Firefox)
@@ -78,20 +79,20 @@ sudo apt-get install -y ./google-chrome-stable_current_amd64.deb
 
 ## Docker
 
-#sudo apt-get -y install \
-#    apt-transport-https \
-#    ca-certificates \
-#    curl \
-#    gnupg-agent \
-#    software-properties-common
-#
-#curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-#sudo add-apt-repository \
-#   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-#   $(lsb_release -cs) \
-#   stable"
-#sudo apt-get update
-#sudo apt-get install -y docker-ce docker-ce-cli containerd.io
+sudo apt-get -y install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+sudo apt-get update
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 
 ## Vim
 
