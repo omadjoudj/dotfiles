@@ -3,7 +3,7 @@
 
 sudo DEBIAN_FRONTEND=noninteractive apt -y  install ecryptfs-utils cryptsetup vim vim-gtk3 vagrant byobu build-essential gufw ufw \
              gnome-tweak-tool gnome-shell-extension-caffeine git fonts-powerline xterm putty vagrant-libvirt vagrant-sshfs\
-             calibre fonts-terminus xfonts-terminus sshuttle autossh ansible ansible-lint aria2 whois \
+             calibre fonts-terminus xfonts-terminus sshuttle autossh ansible ansible-lint aria2 whois fish htop \
              qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager virtinst wireshark nmap \
              geoip-bin bubblewrap lm-sensors fonts-crosextra-carlito clamtk qterminal universal-ctags vlc \
              freerdp2-x11 xdotool zsh zsh-autosuggestions zsh-common zsh-syntax-highlighting keychain valgrind qtbase5-dev \
