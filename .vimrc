@@ -15,6 +15,7 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'fatih/vim-go'
 Plug 'davidhalter/jedi-vim'
+Plug 'preservim/nerdtree'
 
 Plug 'tomasiser/vim-code-dark'
 Plug 'vim-pandoc/vim-pandoc'
@@ -90,11 +91,11 @@ filetype plugin indent on
 au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 
 "ProjectDrawer
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
-let g:netrw_altv = 1
-let g:netrw_winsize = 15
+"let g:netrw_banner = 0
+"let g:netrw_liststyle = 3
+"let g:netrw_browse_split = 4
+"let g:netrw_altv = 1
+"let g:netrw_winsize = 15
 
 " Keymaps
 map <leader>p "+gP
@@ -102,7 +103,7 @@ map <leader>y "+y
 map <leader>r :make<CR>
 map <F5> :make<CR>
 map <leader>s :set spell!<CR>
-map <leader>e :Vexplore<CR>
+map <leader>e :NERDTreeToggle<CR>
 
 noremap <Up> <NOP>
 noremap <Down> <NOP>
