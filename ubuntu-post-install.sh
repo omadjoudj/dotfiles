@@ -12,7 +12,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt -y  install ecryptfs-utils cryptsetup vi
 
 sudo snap install  keepassxc ffmpeg spotify multipass-sshfs multipassvlc
 
-for i in go powershell helm kubectl; do
+for i in powershell helm kubectl; do
  sudo snap install --classic $i
 done
 
