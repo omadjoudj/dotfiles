@@ -65,7 +65,7 @@ if has("gui_running")
     "set go=c
     " Console + X11 Clipboard
     "set go=ca
-    set guifont=Ubuntu\ Mono\ 13
+    set guifont=Ubuntu\ Mono\ 12
 endif
 
 if has("win32")
