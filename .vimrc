@@ -21,6 +21,8 @@ Plug 'tomasiser/vim-code-dark'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 
+Plug 'rhysd/vim-grammarous'
+
 call plug#end()
 
 " Basic settings
