@@ -16,10 +16,7 @@ Plug 'honza/vim-snippets'
 Plug 'fatih/vim-go'
 Plug 'davidhalter/jedi-vim'
 Plug 'preservim/nerdtree'
-
 Plug 'tomasiser/vim-code-dark'
-Plug 'vim-pandoc/vim-pandoc'
-Plug 'vim-pandoc/vim-pandoc-syntax'
 
 call plug#end()
 
