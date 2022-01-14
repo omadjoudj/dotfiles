@@ -124,6 +124,7 @@ alias m='multipass.exe'
 alias k='kubectl.exe'
 alias fix_tunnel_citrix="sed -i 's/^Address=\(.*\):1494/Address=127.0.0.1:1494/' /mnt/c/Users/$USER/Downloads/*.ica"
 alias passgen='tr -dc A-Za-z0-9 </dev/urandom | head -c 20 ; echo'
+alias cdw="cd /mnt/c/Users/$USER/Downloads"
 
 ## X11
 #export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
