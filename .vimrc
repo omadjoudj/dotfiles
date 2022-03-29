@@ -17,6 +17,7 @@ Plug 'fatih/vim-go'
 Plug 'davidhalter/jedi-vim'
 Plug 'preservim/nerdtree'
 Plug 'tomasiser/vim-code-dark'
+Plug 'preservim/tagbar'
 
 call plug#end()
 
