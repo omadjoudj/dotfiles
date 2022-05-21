@@ -5,7 +5,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt -y  install ecryptfs-utils cryptsetup vi
              gnome-tweak-tool gnome-shell-extension-caffeine git fonts-powerline xterm putty vagrant-libvirt vagrant-sshfs\
              calibre fonts-terminus xfonts-terminus sshuttle autossh ansible ansible-lint aria2 whois htop \
              qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager virtinst wireshark nmap \
-             geoip-bin bubblewrap lm-sensors fonts-crosextra-carlito clamtk universal-ctags \
+             geoip-bin bubblewrap lm-sensors fonts-crosextra-carlito clamtk universal-ctags mupdf-tools mupdf\
              freerdp2-x11 xdotool zsh zsh-autosuggestions zsh-common zsh-syntax-highlighting keychain valgrind qtbase5-dev \
              python3-openstackclient python3-octaviaclient python3-heatclient qtcreator clazy cmake pandoc pandoc-citeproc \
              texlive-latex-recommended texlive-xetex texlive-luatex texlive-latex-extra context wkhtmltopdf librsvg2-bin groff wakeonlan
