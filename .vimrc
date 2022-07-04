@@ -113,6 +113,15 @@ imap <C-j> :bp<CR>
 nmap <C-k> :bn<CR>
 imap <C-k> :bn<CR>
 
+" Autoclose
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
+
 " vim password manager
 set cryptmethod=blowfish
 
