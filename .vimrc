@@ -22,7 +22,7 @@ Plug 'preservim/tagbar'
 call plug#end()
 
 " Basic settings
-set tabstop=8
+set tabstop=4
 set expandtab
 set shiftwidth=4
 set softtabstop=4
@@ -80,7 +80,7 @@ endif
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline_theme = 'codedark'
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
 
 autocmd CompleteDone * pclose
 filetype plugin indent on
@@ -136,6 +136,7 @@ autocmd FileType spec set makeprg=rpmbuild\ -ba\ %
 
 " Override default for certain filetypes
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType go setlocal expandtab!
 
 " Highlight extra stuff
 autocmd Syntax * call matchadd('Todo',  '\W\zs\(TODO\|FIXME\|CHANGED\|XXX\|BUG\|HACK\)')
