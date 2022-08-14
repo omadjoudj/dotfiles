@@ -136,7 +136,7 @@ autocmd FileType spec set makeprg=rpmbuild\ -ba\ %
 
 " Override default for certain filetypes
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
-autocmd FileType go setlocal expandtab!
+autocmd FileType go setlocal noexpandtab
 
 " Highlight extra stuff
 autocmd Syntax * call matchadd('Todo',  '\W\zs\(TODO\|FIXME\|CHANGED\|XXX\|BUG\|HACK\)')
