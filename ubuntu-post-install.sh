@@ -65,7 +65,7 @@ sudo apt install -y apt-transport-https
 sudo apt update
 sudo apt install -y code # or code-insiders
 
-EXT_LIST="golang.go ms-python.python ms-toolsai.jupyter ms-vscode.cmake-tools ms-vscode.cpptools redhat.vscode-yaml vscodevim.vim vscoss.vscode-ansible"
+EXT_LIST="golang.go ms-python.python ms-toolsai.jupyter ms-vscode.cmake-tools ms-vscode.cpptools redhat.vscode-yaml vscodevim.vim vscoss.vscode-ansible humao.rest-client"
 
 for i in $EXT_LIST; do
       code --install-extension $i
