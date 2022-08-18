@@ -9,7 +9,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
-Plug 'vim-syntastic/syntastic'
 Plug 'mhinz/vim-startify'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
