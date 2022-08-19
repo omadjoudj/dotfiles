@@ -145,5 +145,8 @@ autocmd Syntax * syntax match sensibleWhitespaceError excludenl /\s\+\%#\@<!$\| 
 
 let g:startify_session_persistence = 1
 
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
+
 ab __fp Othman Madjoudj <athmane@fedoraproject.org>
 ab __ms Othman Madjoudj <omadjoudj@mirantis.com>
