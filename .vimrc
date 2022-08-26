@@ -113,13 +113,13 @@ nmap <C-k> :bn<CR>
 imap <C-k> :bn<CR>
 
 " Autoclose
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O
+autocmd FileType sh,php,c,python,go,yaml inoremap " ""<left>
+autocmd FileType sh,php,c,python,go,yaml inoremap ' ''<left>
+autocmd FileType sh,php,c,python,go,yaml inoremap ( ()<left>
+autocmd FileType sh,php,c,python,go,yaml inoremap [ []<left>
+autocmd FileType sh,php,c,python,go,yaml inoremap { {}<left>
+autocmd FileType sh,php,c,python,go,yaml inoremap {<CR> {<CR>}<ESC>O
+autocmd FileType sh,php,c,python,go,yaml inoremap {;<CR> {<CR>};<ESC>O
 
 " vim password manager
 set cryptmethod=blowfish
