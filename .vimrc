@@ -97,10 +97,15 @@ au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 " Keymaps
 map <leader>p "+gP
 map <leader>y "+y
-map <leader>r :make<CR>
+map <leader>m :make<CR>
 map <F5> :make<CR>
 map <leader>s :set spell!<CR>
 map <leader>e :NERDTreeToggle<CR>
+
+autocmd FileType python map  <leader>r :!python %<CR>
+autocmd FileType go map  <leader>r :GoRun<CR>
+autocmd FileType go map  <leader>t :GoTest<CR>
+autocmd FileType go map  <leader>b :GoBuild<CR>
 
 noremap <Up> <NOP>
 noremap <Down> <NOP>
@@ -120,9 +125,6 @@ autocmd FileType sh,php,c,python,go,yaml inoremap [ []<left>
 autocmd FileType sh,php,c,python,go,yaml inoremap { {}<left>
 autocmd FileType sh,php,c,python,go,yaml inoremap {<CR> {<CR>}<ESC>O
 autocmd FileType sh,php,c,python,go,yaml inoremap {;<CR> {<CR>};<ESC>O
-
-" vim password manager
-set cryptmethod=blowfish
 
 " Make helpers
 autocmd FileType spec set makeprg=rpmbuild\ -ba\ %
