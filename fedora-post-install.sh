@@ -5,7 +5,7 @@
 sudo dnf -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 
-sudo yum install -y sshuttle autossh ansible ansible-lint aria2  gnome-tweak-tool gnome-shell-extension-caffeine xterm putty wireshark cmake pandoc qterminal vagrant vagrant-libvirt vagrant-sshfs google-chrome vlc
+sudo yum install -y sshuttle autossh ansible ansible-lint aria2  gnome-tweak-tool gnome-shell-extension-caffeine xterm putty wireshark cmake pandoc qterminal vagrant vagrant-libvirt vagrant-sshfs google-chrome-stable vlc
 
 
 ## Brave
