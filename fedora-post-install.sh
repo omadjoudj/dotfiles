@@ -7,6 +7,10 @@ sudo dnf -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-rel
 
 sudo yum install -y sshuttle autossh ansible ansible-lint aria2  gnome-tweak-tool gnome-shell-extension-caffeine xterm putty wireshark cmake pandoc qterminal vagrant vagrant-libvirt vagrant-sshfs google-chrome-stable vlc
 
+sudo dnf install -y lpf-spotify-client
+lpf update
+
+
 
 ## Brave
 
