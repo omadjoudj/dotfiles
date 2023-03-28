@@ -1,21 +1,13 @@
-""
-"" curl -fLo ~/.vim/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-""
-"" iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim | ni $HOME/vimfiles/autoload/plug.vim -Force
-""
-""
 
-call plug#begin('~/.vim/plugged')
-
-Plug 'tpope/vim-fugitive'
-Plug 'davidhalter/jedi-vim'
-Plug 'bling/vim-bufferline'
-Plug 'tomasiser/vim-code-dark'
-
-"Plug 'omadjoudj/pyflakes-vim'
-"Plug 'fatih/vim-go'
-
-call plug#end()
+"#### NOTE
+" mkdir -p ~/.vim/pack/plugins/start/
+" cd ~/.vim/pack/plugins/start/
+" git clone https://github.com/tpope/vim-fugitive
+" git clone https://github.com/davidhalter/jedi-vim
+" git clone https://github.com/bling/vim-bufferline
+" git clone https://github.com/tomasiser/vim-code-dark
+" #git clone https://github.com/omadjoudj/pyflakes-vim
+" #git clone https://github.com/fatih/vim-go
 
 " Basic settings
 set tabstop=4
