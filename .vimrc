@@ -85,6 +85,11 @@ let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_winsize = 15
 
+" Bufferline
+let g:bufferline_echo = 0
+autocmd VimEnter *
+    \ let &statusline='%{bufferline#refresh_status()}'
+      \ .bufferline#get_status_string()
 " Keymaps
 map <leader>p "+gP
 map <leader>y "+y
@@ -143,3 +148,5 @@ let g:indentLine_char = '⦙'
 
 ab __fp Othman Madjoudj <athmane@fedoraproject.org>
 ab __ms Othman Madjoudj <omadjoudj@mirantis.com>
+
+
