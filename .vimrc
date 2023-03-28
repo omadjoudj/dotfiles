@@ -7,16 +7,13 @@
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
-Plug 'mhinz/vim-startify'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-Plug 'fatih/vim-go'
 Plug 'davidhalter/jedi-vim'
-Plug 'preservim/nerdtree'
+Plug 'bling/vim-bufferline'
 Plug 'tomasiser/vim-code-dark'
-Plug 'preservim/tagbar'
+
+"Plug 'omadjoudj/pyflakes-vim'
+"Plug 'fatih/vim-go'
 
 call plug#end()
 
@@ -75,12 +72,6 @@ endif
 " Folding
 "set foldmethod=indent
 
-" Airline settings
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#buffer_nr_show = 1
-let g:airline_theme = 'codedark'
-let g:airline_powerline_fonts = 0
-
 autocmd CompleteDone * pclose
 filetype plugin indent on
 
@@ -88,11 +79,11 @@ filetype plugin indent on
 au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 
 "ProjectDrawer
-"let g:netrw_banner = 0
-"let g:netrw_liststyle = 3
-"let g:netrw_browse_split = 4
-"let g:netrw_altv = 1
-"let g:netrw_winsize = 15
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 15
 
 " Keymaps
 map <leader>p "+gP
@@ -100,7 +91,7 @@ map <leader>y "+y
 map <leader>m :make<CR>
 map <F5> :make<CR>
 map <leader>s :set spell!<CR>
-map <leader>e :NERDTreeToggle<CR>
+map <leader>e :Vexplore<CR>
 
 autocmd FileType python map  <leader>r :!python %<CR>
 autocmd FileType go map  <leader>r :GoRun<CR>
@@ -118,13 +109,13 @@ nmap <C-k> :bn<CR>
 imap <C-k> :bn<CR>
 
 " Autoclose
-autocmd FileType sh,php,c,python,go,yaml inoremap " ""<left>
-autocmd FileType sh,php,c,python,go,yaml inoremap ' ''<left>
-autocmd FileType sh,php,c,python,go,yaml inoremap ( ()<left>
-autocmd FileType sh,php,c,python,go,yaml inoremap [ []<left>
-autocmd FileType sh,php,c,python,go,yaml inoremap { {}<left>
-autocmd FileType sh,php,c,python,go,yaml inoremap {<CR> {<CR>}<ESC>O
-autocmd FileType sh,php,c,python,go,yaml inoremap {;<CR> {<CR>};<ESC>O
+"autocmd FileType sh,php,c,python,go,yaml inoremap " ""<left>
+"autocmd FileType sh,php,c,python,go,yaml inoremap ' ''<left>
+"autocmd FileType sh,php,c,python,go,yaml inoremap ( ()<left>
+"autocmd FileType sh,php,c,python,go,yaml inoremap [ []<left>
+"autocmd FileType sh,php,c,python,go,yaml inoremap { {}<left>
+"autocmd FileType sh,php,c,python,go,yaml inoremap {<CR> {<CR>}<ESC>O
+"autocmd FileType sh,php,c,python,go,yaml inoremap {;<CR> {<CR>};<ESC>O
 
 " Make helpers
 autocmd FileType spec set makeprg=rpmbuild\ -ba\ %
@@ -144,8 +135,6 @@ autocmd Syntax * call matchadd('Todo',  '\W\zs\(TODO\|FIXME\|CHANGED\|XXX\|BUG\|
 autocmd Syntax * call matchadd('Debug', '\W\zs\(NOTE\|INFO\|IDEA\)')
 highlight link sensibleWhitespaceError Error
 autocmd Syntax * syntax match sensibleWhitespaceError excludenl /\s\+\%#\@<!$\| \+\ze\t/ display containedin=ALL
-
-let g:startify_session_persistence = 1
 
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
