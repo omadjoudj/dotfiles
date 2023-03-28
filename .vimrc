@@ -6,7 +6,7 @@
 " git clone https://github.com/davidhalter/jedi-vim
 " git clone https://github.com/bling/vim-bufferline
 " git clone https://github.com/tomasiser/vim-code-dark
-" #git clone https://github.com/omadjoudj/pyflakes-vim
+" git clone https://github.com/omadjoudj/pyflakes-vim
 " #git clone https://github.com/fatih/vim-go
 
 " Basic settings
