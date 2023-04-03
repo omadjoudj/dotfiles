@@ -10,9 +10,9 @@ sudo DEBIAN_FRONTEND=noninteractive apt -y  install ecryptfs-utils cryptsetup vi
              python3-openstackclient python3-octaviaclient python3-heatclient qtcreator clazy cmake pandoc pandoc-citeproc \
              texlive-latex-recommended texlive-xetex texlive-luatex texlive-latex-extra context wkhtmltopdf librsvg2-bin groff wakeonlan
 
-sudo snap install  keepassxc ffmpeg spotify multipass multipass-sshfs vlc
+sudo snap install  keepassxc ffmpeg spotify vlc
 
-for i in powershell helm kubectl go alacritty; do
+for i in powershell helm kubectl go; do
  sudo snap install --classic $i
 done
 
