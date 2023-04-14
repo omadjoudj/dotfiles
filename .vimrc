@@ -39,7 +39,7 @@ set hidden "dont ask about unsaved buffers
 set background=dark
 set wildmenu
 set path+=**
-colorscheme codedark
+colorscheme desert
 set cursorline
 set colorcolumn=80
 
