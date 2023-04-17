@@ -12,7 +12,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt -y  install ecryptfs-utils cryptsetup vi
 
 sudo snap install  keepassxc ffmpeg spotify vlc
 
-for i in powershell helm kubectl go; do
+for i in powershell helm kubectl go code; do
  sudo snap install --classic $i
 done
 
@@ -58,12 +58,12 @@ echo 'vm.swappiness = 0' | sudo tee -a /etc/sysctl.d/99-swap.conf
 #sudo apt-get install -y virtualbox-6.1
 
 ## VScode (snap is a bit slow to start)
-wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
-sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
-sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
-sudo apt install -y apt-transport-https
-sudo apt update
-sudo apt install -y code # or code-insiders
+#wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+#sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
+#sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+#sudo apt install -y apt-transport-https
+#sudo apt update
+#sudo apt install -y code # or code-insiders
 
 EXT_LIST="golang.go ms-python.python ms-toolsai.jupyter ms-vscode.cmake-tools ms-vscode.cpptools redhat.vscode-yaml vscodevim.vim vscoss.vscode-ansible humao.rest-client"
 
@@ -90,24 +90,24 @@ sudo apt install -y brave-browser
 
 ## Docker
 
-sudo apt-get -y install \
-    apt-transport-https \
-    ca-certificates \
-    curl \
-    gnupg-agent \
-    software-properties-common
-
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository \
-   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-   $(lsb_release -cs) \
-   stable"
-sudo apt-get update
-sudo apt-get install -y docker-ce docker-ce-cli containerd.io
+#sudo apt-get -y install \
+#    apt-transport-https \
+#    ca-certificates \
+#    curl \
+#    gnupg-agent \
+#    software-properties-common
+#
+#curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+#sudo add-apt-repository \
+#   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+#   $(lsb_release -cs) \
+#   stable"
+#sudo apt-get update
+#sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 
 ## Vim
 
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+#curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+#    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 curl -o ~/.vimrc https://raw.githubusercontent.com/omadjoudj/dotfiles/master/.vimrc
