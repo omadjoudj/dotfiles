@@ -86,7 +86,7 @@ let g:airline_powerline_fonts = 0
 " Keymaps
 map <leader>p "+gP
 map <leader>y "+y
-map <leader>m :make<CR>
+map <leader>r :make<CR>
 map <F5> :make<CR>
 map <leader>s :set spell!<CR>
 map <leader>e :Vexplore<CR>
