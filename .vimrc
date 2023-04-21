@@ -2,9 +2,10 @@
 "#### NOTE
 " mkdir -p ~/.vim/pack/plugins/start/
 " cd ~/.vim/pack/plugins/start/
+" git clone https://github.com/vim-airline/vim-airline
+" git clone https://github.com/tomasiser/vim-code-dark
 " git clone https://github.com/tpope/vim-fugitive
 " git clone https://github.com/davidhalter/jedi-vim
-" git clone https://github.com/bling/vim-bufferline
 " git clone https://github.com/omadjoudj/pyflakes-vim
 " #git clone https://github.com/fatih/vim-go
 
@@ -38,7 +39,7 @@ set hidden "dont ask about unsaved buffers
 set background=dark
 set wildmenu
 set path+=**
-colorscheme desert
+colorscheme codedark
 set cursorline
 set colorcolumn=80
 
@@ -76,11 +77,12 @@ let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_winsize = 15
 
-" Bufferline
-"let g:bufferline_echo = 0
-"autocmd VimEnter *
-"    \ let &statusline='%{bufferline#refresh_status()}'
-"      \ .bufferline#get_status_string()
+" Airline settings
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline_theme = 'codedark'
+let g:airline_powerline_fonts = 0
+
 " Keymaps
 map <leader>p "+gP
 map <leader>y "+y
