@@ -12,10 +12,9 @@ sudo DEBIAN_FRONTEND=noninteractive apt -y  install ecryptfs-utils cryptsetup vi
 
 sudo snap install  keepassxc ffmpeg spotify vlc
 
-#for i in powershell helm kubectl go code; do
-# sudo snap install --classic $i
-#done
-sudo snap install --classic code
+for i in powershell helm kubectl go code; do
+ sudo snap install --classic $i
+done
 
 ## Cleaning up default install
 
@@ -66,28 +65,28 @@ echo 'vm.swappiness = 0' | sudo tee -a /etc/sysctl.d/99-swap.conf
 #sudo apt update
 #sudo apt install -y code # or code-insiders
 
-#EXT_LIST="golang.go ms-python.python ms-toolsai.jupyter ms-vscode.cmake-tools ms-vscode.cpptools redhat.vscode-yaml vscodevim.vim vscoss.vscode-ansible humao.rest-client"
+EXT_LIST="golang.go ms-python.python ms-toolsai.jupyter ms-vscode.cmake-tools ms-vscode.cpptools redhat.vscode-yaml vscodevim.vim vscoss.vscode-ansible humao.rest-client"
 
-#for i in $EXT_LIST; do
-#      code --install-extension $i
-#done
+for i in $EXT_LIST; do
+      code --install-extension $i
+done
 
 
 ## Google chrome (some stuf does not work with Firefox)
 
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo apt-get install -y ./google-chrome-stable_current_amd64.deb
+#wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+#sudo apt-get install -y ./google-chrome-stable_current_amd64.deb
 
 ## Brave
-sudo apt install -y apt-transport-https curl
+#sudo apt install -y apt-transport-https curl
 
-sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+#sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 
-echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+#echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 
-sudo apt update
+#sudo apt update
 
-sudo apt install -y brave-browser
+#sudo apt install -y brave-browser
 
 ## Docker
 
@@ -108,7 +107,7 @@ sudo apt install -y brave-browser
 
 ## Vim
 
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+#curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+#    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 curl -o ~/.vimrc https://raw.githubusercontent.com/omadjoudj/dotfiles/master/.vimrc
