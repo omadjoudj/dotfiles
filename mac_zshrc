@@ -1,0 +1,29 @@
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+# Add Visual Studio Code (code)
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+export CLICOLOR=1
+
+##
+export PATH="$PATH:$HOME/workspace/git/perso_github/cloud-ops-tools/:$HOME/bin/"
+source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source "/opt/homebrew/opt/zsh-git-prompt/zshrc.sh"
+
+source ~/workspace/git/perso_github/cloud-ops-tools/ops.alias.sh
+
+eval `keychain --eval id_rsa id_rsa.opscare`
+
+## Git prompt
+
+function parse_git_branch() {
+    git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/[\1]/p'
+}
+
+COLOR_DEF=$'%f'
+COLOR_USR=$'%F{243}'
+COLOR_DIR=$'%F{197}'
+COLOR_GIT=$'%F{39}'
+setopt PROMPT_SUBST
+#export PROMPT='${COLOR_USR}%n ${COLOR_DIR}%~ ${COLOR_GIT}$(parse_git_branch)${COLOR_DEF} $ '
+export PROMPT='%n@%m %1~ ${COLOR_GIT}$(parse_git_branch)${COLOR_DEF} %'
