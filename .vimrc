@@ -5,8 +5,13 @@
 " git clone https://github.com/vim-airline/vim-airline
 " git clone https://github.com/tomasiser/vim-code-dark
 " git clone https://github.com/tpope/vim-fugitive
+" https://github.com/Yggdroot/indentLine
+" https://github.com/dense-analysis/ale
+" Python
 " git clone https://github.com/davidhalter/jedi-vim
-" git clone https://github.com/omadjoudj/pyflakes-vim
+" YAML
+" https://github.com/pedrohdz/vim-yaml-folds
+" Golang
 " #git clone https://github.com/fatih/vim-go
 
 " Basic settings
@@ -33,7 +38,7 @@ set number
 set incsearch
 set laststatus=2
 "set t_Co=256
-"set cindent
+set cindent
 set hidden "dont ask about unsaved buffers
 "set mouse=a
 set background=dark
@@ -49,7 +54,8 @@ if has("gui_running")
     "set go=c
     " Console + X11 Clipboard
     "set go=ca
-    set guifont=Ubuntu\ Mono\ 12
+    "set guifont=Ubuntu\ Mono\ 12
+    set guifont=Monaco:h14
 endif
 
 if has("win32")
@@ -86,7 +92,7 @@ let g:airline_powerline_fonts = 0
 " Keymaps
 map <leader>p "+gP
 map <leader>y "+y
-map <leader>r :make<CR>
+map <leader>m :make<CR>
 map <F5> :make<CR>
 map <leader>s :set spell!<CR>
 map <leader>e :Vexplore<CR>
@@ -96,10 +102,10 @@ autocmd FileType go map  <leader>r :GoRun<CR>
 autocmd FileType go map  <leader>t :GoTest<CR>
 autocmd FileType go map  <leader>b :GoBuild<CR>
 
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
+"noremap <Up> <NOP>
+"noremap <Down> <NOP>
+"noremap <Left> <NOP>
+"noremap <Right> <NOP>
 " Use Ctrl+6
 nmap <C-j> :bp<CR>
 imap <C-j> :bp<CR>
@@ -141,5 +147,3 @@ let g:indentLine_char = '⦙'
 
 ab __fp Othman Madjoudj <athmane@fedoraproject.org>
 ab __ms Othman Madjoudj <omadjoudj@mirantis.com>
-
-
