@@ -46,6 +46,7 @@ set wildmenu
 set path+=**
 colorscheme codedark
 set cursorline
+set cuc
 set colorcolumn=80
 
 if has("gui_running")
