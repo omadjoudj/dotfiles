@@ -3,7 +3,6 @@
 " mkdir -p ~/.vim/pack/plugins/start/
 " cd ~/.vim/pack/plugins/start/
 " git clone https://github.com/vim-airline/vim-airline
-" git clone https://github.com/tomasiser/vim-code-dark
 " git clone https://github.com/tpope/vim-fugitive
 " https://github.com/Yggdroot/indentLine
 " https://github.com/dense-analysis/ale
@@ -44,7 +43,7 @@ set hidden "dont ask about unsaved buffers
 set background=dark
 set wildmenu
 set path+=**
-colorscheme codedark
+colorscheme desert
 set cursorline
 set cuc
 set colorcolumn=80
@@ -87,7 +86,7 @@ let g:netrw_winsize = 15
 " Airline settings
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
-let g:airline_theme = 'codedark'
+"let g:airline_theme = ''
 let g:airline_powerline_fonts = 0
 
 " Keymaps
