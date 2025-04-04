@@ -102,15 +102,11 @@ autocmd FileType go map  <leader>r :GoRun<CR>
 autocmd FileType go map  <leader>t :GoTest<CR>
 autocmd FileType go map  <leader>b :GoBuild<CR>
 
-"noremap <Up> <NOP>
-"noremap <Down> <NOP>
-"noremap <Left> <NOP>
-"noremap <Right> <NOP>
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
 " Use Ctrl+6
-nmap <C-j> :bp<CR>
-imap <C-j> :bp<CR>
-nmap <C-k> :bn<CR>
-imap <C-k> :bn<CR>
 
 " Autoclose
 "autocmd FileType sh,php,c,python,go,yaml inoremap " ""<left>
