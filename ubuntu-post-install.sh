@@ -3,7 +3,7 @@
 
 sudo DEBIAN_FRONTEND=noninteractive apt -y  install ecryptfs-utils cryptsetup vim vim-gtk3 byobu build-essential gufw ufw \
              git fonts-powerline xterm putty \
-             calibre fonts-terminus xfonts-terminus sshuttle autossh ansible ansible-lint aria2 whois htop \
+             fonts-terminus xfonts-terminus sshuttle autossh ansible ansible-lint aria2 whois htop \
              qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager virtinst wireshark nmap \
              geoip-bin bubblewrap lm-sensors fonts-crosextra-carlito clamtk universal-ctags mupdf-tools mupdf\
              freerdp2-x11 xdotool zsh zsh-autosuggestions zsh-common zsh-syntax-highlighting keychain valgrind \
