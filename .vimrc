@@ -12,6 +12,9 @@
 " https://github.com/pedrohdz/vim-yaml-folds
 " Golang
 " #git clone https://github.com/fatih/vim-go
+" FZF
+" https://github.com/junegunn/fzf
+" https://github.com/junegunn/fzf.vim
 
 " Basic settings
 set tabstop=4
