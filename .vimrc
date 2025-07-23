@@ -82,9 +82,9 @@ au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 "ProjectDrawer
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
-let g:netrw_altv = 1
-let g:netrw_winsize = 15
+"let g:netrw_browse_split = 4
+"let g:netrw_altv = 1
+"let g:netrw_winsize = 15
 
 " Airline settings
 let g:airline#extensions#tabline#enabled = 1
@@ -98,7 +98,7 @@ map <leader>y "+y
 map <leader>m :make<CR>
 map <F5> :make<CR>
 map <leader>s :set spell!<CR>
-map <leader>e :Vexplore<CR>
+map <leader>e :Explore<CR>
 
 autocmd FileType python map  <leader>r :!python %<CR>
 autocmd FileType go map  <leader>r :GoRun<CR>
