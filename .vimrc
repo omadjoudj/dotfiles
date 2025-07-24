@@ -15,6 +15,8 @@
 " FZF
 " https://github.com/junegunn/fzf
 " https://github.com/junegunn/fzf.vim
+" CtrlP
+" git clone --depth=1 https://github.com/ctrlpvim/ctrlp.vim.git
 
 " Basic settings
 set tabstop=4
