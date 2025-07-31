@@ -20,9 +20,7 @@
 
 " Basic settings
 set tabstop=4
-set expandtab
 set shiftwidth=4
-set softtabstop=4
 ""
 set nocompatible
 set backspace=indent,eol,start
@@ -133,6 +131,7 @@ autocmd FileType spec set makeprg=rpmbuild\ -ba\ %
 
 " Override default for certain filetypes
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType python setlocal ts=4 sts=4 sw=4 expandtab
 autocmd FileType go setlocal noexpandtab
 
 " Highlight extra stuff
